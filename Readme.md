@@ -3,7 +3,7 @@
 * Студент: [Анна Кузнецова](https://up.htmlacademy.ru/adaptive/18/user/993327).
 * Наставник: `Неизвестно`.
 
----
+-----
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
@@ -14,7 +14,7 @@
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
 
----
+-----
 
 ### Памятка
 
