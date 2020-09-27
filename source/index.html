@@ -201,5 +201,29 @@
       </div>
     </footer>
 
+
+    <!-- Добавить в корзину -->
+    <section class="modal  modal--add-cart">
+      <h2 class="modal-title">Добавить в корзину</h2>
+      <p class="modal-description">Выберите размер:</p>
+      <form class="modal__form  add-cart-form" action="https://echo.htmlacademy.ru" method="POST">
+        <ul class="add-cart-form__list">
+          <li class="add-cart-form__item">
+            <input class="visually-hidden" id="s-size" type="radio" name="size-select" value="s" checked>
+            <label class="add-cart-form__label" for="s-size">S</label>
+          </li>
+          <li class="add-cart-form__item">
+            <input class="visually-hidden" id="m-size" type="radio" name="size-select" value="m">
+            <label class="add-cart-form__label" for="m-size">M</label>
+          </li>
+          <li class="add-cart-form__item">
+            <input class="visually-hidden" id="l-size" type="radio" name="size-select" value="l">
+            <label class="add-cart-form__label" for="l-size">L</label>
+          </li>
+        </ul>
+
+        <button class="modal__button  button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
