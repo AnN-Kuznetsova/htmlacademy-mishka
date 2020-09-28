@@ -1,0 +1,31 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin container($container-width: 320px, $container-padding: 30px, $container-padding-top: 0, $container-padding-bottom: 0) {
+  min-width: $container-width;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: $container-padding-top $container-padding $container-padding-bottom;
+}
+
+@mixin list-style-none {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin font-options($family: $font-family-regular, $size: 15px, $line: 24px, $font-color: $text-base-color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line;
+  color: $font-color;
+}

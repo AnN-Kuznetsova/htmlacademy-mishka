@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  //width: 320px;
+  //width: $tablet-width;
+  //width: $desktop-width;
+
+  @include font-options();
+  font-weight: normal;
+
+  background-color: $bg-color-base;
+}
+
+/*  Ссылки  */
+a {
+  text-decoration: none;
+}
+
+/*  Картинки  */
+img {
+  max-width: 100%;
+  height: auto;
+}
