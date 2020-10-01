@@ -1,0 +1,13 @@
+.site-nav {
+  @include list-style-none();
+}
+
+.site-nav__item {
+  position: relative;
+
+  @include decorative-line-border();
+}
+
+.site-nav__link {
+  @include nav-link();
+}

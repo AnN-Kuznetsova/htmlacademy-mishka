@@ -1,0 +1,7 @@
+.page-footer {
+  background-color: $bg-color-grey;
+}
+
+.page-footer__container {
+  @include container(320px, 30px, 8px, 15px);
+}

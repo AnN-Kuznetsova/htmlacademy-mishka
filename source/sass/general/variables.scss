@@ -1,10 +1,29 @@
 /*  ШРИФТЫ  */
-$font-family-regular: "OpenSans-regular", "Arial", sans-serif;
-$font-family-bold: "OpenSans-bold", "Arial", sans-serif;
+$font-regular: "OpenSans-regular", "Arial", sans-serif;
+$font-bold: "OpenSans-bold", "Arial", sans-serif;
 
 /*  ЦВЕТА  */
 //  Текст
 $text-base-color: #444444;
+$text-second-color: #ffffff;
+$text-title-color: #000000;
+
+//  кнопки
+$menu-button-color: #221f1f;
+$btn-color-base: #ffffff;
+$btn-border-base-color: #444444;
+
+//  ссылки
+$link-border-color: #62d1ba;
+$social-color-base: #221f1f;
 
 //  Фон
 $bg-color-base: #ffffff;
+$bg-color-grey: #f1f1f1;
+$bg-color-categories: #fafafa;
+$bg-color-green-light: #63d1bb;
+$bg-color-green-dark: #56c3b2;
+
+//  Рамки
+$border-color-grey: #ececec;
+$border-color-grey-2: #e5e5e5;

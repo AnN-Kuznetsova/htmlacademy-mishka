@@ -1,0 +1,15 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 37px 10px;
+
+  outline: none;
+  border-top: 1px solid $border-color-grey-2;
+}
+
+.copyright__intro {
+  @include font-options($font-bold, 19px, 18px, $text-title-color);
+}

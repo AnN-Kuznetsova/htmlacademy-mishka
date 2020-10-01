@@ -1,0 +1,19 @@
+.features__container {
+  @include container(320px, 30px, 27px, 20px);
+}
+
+.features__title {
+  @include regular-title();
+
+  margin-bottom: 31px;
+}
+
+.features__list {
+  @include list-style-none();
+}
+
+.features__item {
+  @include font-options($font-bold, 17px, 20px, $text-title-color);
+
+  padding: 55px 0 28px;
+}

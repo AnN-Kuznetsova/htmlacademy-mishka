@@ -1,0 +1,44 @@
+.contacts-info__container {
+  @include container(320px, 30px, 35px, 5px);
+}
+
+.contacts-info__title {
+  @include font-options($font-bold, 18px, 30px, $text-title-color);
+
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+
+  font-weight: normal;
+  text-transform: none;
+}
+
+.contacts-info__content {
+  @include font-options($font-regular, 15px, 30px, $text-base-color);
+
+  width: 100%;
+}
+
+.contacts-info__content-property {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts-info__data {
+  display: inline-block;
+  vertical-align: top;
+  min-height: 40px;
+  padding: 0 0 31px 0;
+}
+
+.contacts-info__content-title {
+  flex-shrink: 0;
+
+  width: 76px;
+
+  text-transform: lowercase;
+}
+
+.contacts-info__content-value {
+  flex-grow: 1;
+}

@@ -1,0 +1,15 @@
+.link {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    border-bottom: 2px solid $link-border-color;
+    transform: translateY(3px);
+  }
+}

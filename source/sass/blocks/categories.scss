@@ -1,0 +1,45 @@
+.categories__container {
+  @include container(320px, 0, 0, 0);
+
+  background-color: $bg-color-categories;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-position: center -18px;
+  background-repeat: no-repeat;
+  background-size: 575px 375px;
+}
+
+.categories__intro {
+  @include big-title();
+
+  margin: 71px 30px 123px;
+
+  background-color: transparent;
+}
+
+.categories__list {
+  @include list-style-none();
+
+  background-color: $bg-color-green-light;
+}
+
+.categories__item {
+  &:last-child {
+    background-color: $bg-color-green-dark;
+  }
+}
+
+.categories__link {
+  @include font-options($font-bold, 19px, 24px, $text-second-color);
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 103px;
+  margin: 0;
+  padding: 25px;
+  padding-left: 30px;
+  padding-right: 130px;
+
+  font-weight: normal;
+  text-transform: none;
+}

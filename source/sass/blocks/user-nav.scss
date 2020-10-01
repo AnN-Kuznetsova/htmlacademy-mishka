@@ -1,0 +1,17 @@
+.user-nav {
+  @include list-style-none();
+}
+
+.user-nav__item {
+  position: relative;
+
+  @include decorative-line-border();
+}
+
+.user-nav__link {
+  @include nav-link();
+
+  /* &:last-child {
+    border-bottom: 1px solid $border-color-grey;
+  } */
+}

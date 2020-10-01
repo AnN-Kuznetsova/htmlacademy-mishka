@@ -23,9 +23,94 @@
   list-style: none;
 }
 
-@mixin font-options($family: $font-family-regular, $size: 15px, $line: 24px, $font-color: $text-base-color) {
+@mixin font-options($family: $font-regular, $size: 15px, $line: 24px, $font-color: $text-base-color) {
   font-family: $family;
   font-size: $size;
   line-height: $line;
   color: $font-color;
+}
+
+@mixin big-title {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-bold, 27px, 30px, $text-title-color);
+  font-weight: normal;
+  text-transform: none;
+  text-align: center;
+
+  background-color: $bg-color-grey;
+}
+
+@mixin regular-title {
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-bold, 25px, 30px, $text-title-color);
+  font-weight: normal;
+  text-transform: none;
+}
+
+@mixin little-title {
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-bold, 17px, 24px, $text-title-color);
+  font-weight: normal;
+  text-transform: none;
+}
+
+@mixin nav-link {
+  @include little-title();
+
+  display: block;
+
+  margin: 0;
+  padding: 27px 0 28px 46px;
+
+  text-align: left;
+
+  //cursor: default;
+  //outline: none;
+}
+
+//  линейные бордеры на всю ширину
+@mixin decorative-line-border($box-width: 100vw, $box-height: 0, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+
+    width: $box-width;
+    min-width: 320px;
+    height: $box-height;
+
+    border-#{$border-side}: $border-width solid $border-color;
+    transform: translateX(-50%);
+  }
+}
+
+//  волнистые бордеры на всю ширину
+@mixin decorative-wavy-border-line() {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+
+    width: 100vw;
+    min-width: 320px;
+    height: 7px;
+
+    background-color: transparent;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: 10px top;
+    background-size: 100% 7px;
+    background-repeat: repeat-x;
+
+    transform: translateX(-50%) translateY(-7px);
+  }
 }

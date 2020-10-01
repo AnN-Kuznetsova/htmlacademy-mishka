@@ -1,0 +1,54 @@
+.button {
+  display: block;
+
+  padding: 13px 30px 15px;
+
+  @include font-options($font-bold, 17px, 20px, $text-base-color);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $btn-color-base;
+  border: 2px solid $btn-border-base-color;
+  outline: none;
+  cursor: pointer;
+
+/*   &:hover,
+  &:focus {
+    background-color: $btn-color-base-hover;
+    color: $btn-text-color-hover;
+  }
+
+  &:focus {
+    //@include focus-button();
+    @include focus();
+  }
+
+  &:active {
+    background-color: $btn-color-base-active;
+    color: $btn-text-color-active;
+
+    box-shadow: none;
+  } */
+
+/*   &--grey {
+    background-color: $btn-color-second;
+    color: $btn-text-color-second-base;
+  }
+
+  &--grey:hover,
+  &--grey:focus {
+    background-color: $btn-color-second-hover;
+    color: $btn-text-color-second-hover;
+  }
+
+  &--grey:focus {
+    //@include focus-button($btn-text-color-second-hover, $btn-color-second-hover);
+    @include focus();
+  }
+
+  &--grey:active {
+    background-color: $btn-color-second-active;
+    color: $btn-text-color-second-active;
+  } */
+}

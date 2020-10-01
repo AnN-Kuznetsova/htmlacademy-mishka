@@ -1,0 +1,39 @@
+.social {
+  @include list-style-none();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+.social__item {
+  margin: 11px 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  outline: 1px solid red; //none;
+}
+
+.social__image {
+  fill: $social-color-base;
+  pointer-events: none;
+
+  background-color: yellowgreen;
+}

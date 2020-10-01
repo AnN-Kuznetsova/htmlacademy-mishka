@@ -1,0 +1,38 @@
+/* .contacts {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-width() {
+    height: 400px;
+
+    overflow: hidden;
+  }
+} */
+
+/* .contacts__info {
+  order: -1;
+
+  @include desktop-width() {
+    order: 2;
+    position: relative;
+    z-index: 10;
+    top: -100%;
+    left: 50%;
+
+    width: 570px;
+    margin-left: -40px;
+    margin-top: -5px;
+
+    transform: translateX(-100%) translateY(50%);
+  }
+} */
+
+/* .contacts__map {
+  @include desktop-width() {
+    min-height: 400px;
+  }
+} */
+
+.contacts__button {
+  @include container(320px, 30px, 38px, 40px);
+}
