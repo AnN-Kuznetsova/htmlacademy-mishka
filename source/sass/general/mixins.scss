@@ -31,12 +31,11 @@
 }
 
 @mixin big-title {
-  display: inline-block;
-  vertical-align: baseline;
+  display: block;
   position: relative;
 
   margin: 0;
-  padding: 0;
+  padding: 72px 30px 76px;
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;

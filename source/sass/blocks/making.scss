@@ -1,0 +1,38 @@
+.making__container {
+  @include container(320px, 30px, 0, 58px);
+
+  position: relative;
+  top: -150px;
+  overflow: hidden;
+
+  margin-bottom: -150px;
+}
+
+.making__player {
+  position: relative;
+  top: 246px;
+}
+
+.making__wrapper {
+  @include container(260px, 33px, 23px, 32px);
+
+  border: 1px solid $border-color-grey;
+}
+
+.making__title {
+  @include little-title();
+
+  margin-bottom: 201px;
+  padding-left: 56px;
+}
+
+.making__description {
+  @include font-options($font-regular, 13px, 24px, $text-base-color);
+
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.making__button {
+  padding: 13px 20px 15px;
+}

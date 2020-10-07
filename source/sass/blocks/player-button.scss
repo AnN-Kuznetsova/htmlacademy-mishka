@@ -1,0 +1,16 @@
+.player-button {
+  width: 101px;
+  height: 77px;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &--play {
+    background-image: url("../img/icon-play.svg");
+    background-size: 101px 77px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}

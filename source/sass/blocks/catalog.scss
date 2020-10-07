@@ -1,0 +1,16 @@
+.catalog__container {
+  @include container(320px, 30px, 30px, 30px);
+}
+
+.catalog__list {
+  @include list-style-none();
+}
+
+.catalog__item {
+  margin: 0;
+  margin-bottom: 31px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
