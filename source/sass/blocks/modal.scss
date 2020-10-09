@@ -1,0 +1,30 @@
+.modal__container {
+  @include container(320px, 30px, 31px, 46px);
+
+  border-top: 1px solid $border-color-grey-4;
+  box-shadow: 0 5px 0 10 rgba($shadow-base-color, 0.25);
+}
+
+.modal__title {
+  margin: 0 0 12px 0;
+  padding: 0;
+
+  @include font-options($font-bold, 25px, 30px, $text-title-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__description {
+  margin: 0 0 23px 0;
+  padding: 0;
+
+  @include font-options($font-regular, 15px, 30px, $text-base-color);
+  text-align: center;
+}
+
+.modal__button {
+  color: $text-second-color;
+
+  background-color: $bg-color-green-light;
+  border: none;
+}

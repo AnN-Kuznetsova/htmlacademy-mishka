@@ -1,0 +1,24 @@
+.add-cart-form__list {
+  @include list-style-none();
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.add-cart-form__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 82px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-bold, 17px, 16px, $text-base-color);
+
+  border: 2px solid $border-color-grey;
+}
