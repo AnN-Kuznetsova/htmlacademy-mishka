@@ -113,3 +113,104 @@
     transform: translateX(-50%) translateY(-7px);
   }
 }
+
+
+/*  Кастомные поля выбора   */
+/*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
+
+@mixin custom-choice($choice-size: 40px) {
+  position: relative;
+
+  padding-left: $choice-size +  22px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-color: $bg-color-base;
+    border: 2px solid $input-border-base-color;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  /* &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  } */
+
+  /* @include tablet-width() {
+    padding-left: $choice-size +  20px;
+  } */
+}
+
+//  hover
+/* @mixin custom-choice--hover() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+} */
+
+//  фокус
+/* @mixin custom-choice--focus() {
+  outline: none;
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 10px $bg-color-base,
+    0 0 0 11px $bg-color-third;
+
+  @include tablet-width() {
+    box-shadow:
+      0 0 0 15px $bg-color-base,
+      0 0 0 16px $bg-color-third;
+  }
+} */
+
+// активный
+/* @mixin custom-choice--checked($choice-size: 40px) {
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  //  радиокнопки
+  &--radio::after {
+    top: 50%;
+    left: ($choice-size / 2);
+
+    width: ($choice-size / 2.3);
+    height: ($choice-size / 2.3);
+
+    background-color: $bg-color-third;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  //  чекбоксы
+  &--checkbox::after {
+    top: 50%;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 16px;
+    background-position: center center;
+
+    transform: translateY(-50%);
+  }
+} */

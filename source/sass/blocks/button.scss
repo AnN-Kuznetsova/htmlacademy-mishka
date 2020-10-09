@@ -1,6 +1,7 @@
 .button {
   display: block;
 
+  width: 100%;
   padding: 13px 30px 15px;
 
   @include font-options($font-bold, 17px, 20px, $text-base-color);

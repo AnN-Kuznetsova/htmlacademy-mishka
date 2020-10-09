@@ -1,0 +1,21 @@
+.client-data {
+  padding: 0;
+
+  border: none;
+
+  //background-color: lightgoldenrodyellow;
+}
+
+.client-data__list {
+  @include list-style-none();
+}
+
+.client-data__item {
+  margin-bottom: 32px;
+
+  //outline: 1px solid red;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

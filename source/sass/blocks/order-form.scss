@@ -1,0 +1,22 @@
+.order-form__container {
+  @include container(320px, 30px, 0, 55px);
+}
+
+.order-form__product {
+  margin: 0 0 31px 0;
+}
+
+.order-form__client {
+  margin: 0 0 29px 0;
+}
+
+.order-form__additionally {
+  margin: 0 0 9px 0;
+}
+
+.order-form__required {
+  @include font-options($font-regular, 14px, 16px, $text-base-color);
+
+  display: block;
+  margin: 0 0 32px 0;
+}

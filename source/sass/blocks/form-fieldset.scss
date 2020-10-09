@@ -1,0 +1,335 @@
+//  ширина/высота кастомных радио/чекбоксовы
+$form-choice-size: 39px;
+//$form-choice-size-tablet: 40px;
+
+//  высота инпутов
+$input-height: 52px;
+//$input-height-tablet: 52px;
+
+/* @mixin flex-row() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  /* &--program-select {
+    margin-left: -$mobile-padding;
+    margin-right: -$mobile-padding;
+    padding: $mobile-padding;
+
+    border: 1px solid $border-color-third;
+
+    @include tablet-width() {
+      margin: 0;
+      padding: 23px 27px;
+    }
+  } */
+}
+
+.form-fieldset__legend {
+  @include font-options($font-bold, 17px, 17px, $text-form-legend-color);
+
+  display: block;
+
+  width: min-content;
+  padding: 0;
+  padding-bottom: 29px;
+
+  text-transform: uppercase;
+
+  &--choice {
+    padding-bottom: 25px;
+  }
+
+  &--tel,
+  &--email {
+    padding-bottom: 6px;
+  }
+
+  /* @include tablet-width() {
+    width: fit-content; //auto;
+    margin-bottom: 76px;
+  } */
+}
+
+.form-fieldset__list {
+  @include list-style-none();
+
+  /* @include tablet-width() {
+    &--additionally {
+      @include flex-row();
+
+      margin-top: -20px;
+    }
+  }
+
+  @include desktop-width() {
+    &--cat-owner {
+      @include flex-row();
+    }
+  } */
+}
+
+.form-fieldset__item {
+  display: flex;
+  position: relative;
+
+  margin-bottom: 16px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--radio {
+    min-height: $form-choice-size;
+    margin-bottom: 16px;
+  }
+
+  &--checkbox {
+    min-height: $form-choice-size;
+    margin-bottom: 22px;
+  }
+
+  /* @include tablet-width() {
+    margin-bottom: 20px;
+
+    &--choice {
+      min-height: $form-choice-size-tablet;
+      margin-bottom: 13px;
+    }
+  } */
+}
+
+/* .form-fieldset__list--cat-owner .form-fieldset__item {
+  @include desktop-width() {
+    width: 570px;
+    margin-bottom: 20px;
+  }
+} */
+
+/* .form-fieldset__list--additionally .form-fieldset__item {
+  @include tablet-width() {
+    width: 45.3%;
+    margin-bottom: 32px;
+  }
+
+  @include desktop-width() {
+    width: 245px;
+  }
+} */
+
+.form-fieldset__label {
+  @include font-options($font-bold, 17px, 18px, $text-title-color);
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  &--client {
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+/*   &--choice {
+    @include custom-choice($form-choice-size);
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 62px;
+  } */
+
+  /* flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  max-width: 50%;
+  margin: auto 15px auto 0; */
+}
+
+/* .form-fieldset__label-required {
+  top: 0.01em;
+  font-size: 1.05em;
+} */
+
+.form-fieldset__input {
+  vertical-align: middle;
+  width: 100%;
+  height: $input-height;
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-regular, 17px, 18px, $text-base-color);
+
+  background: none;
+  border: none;
+  border-bottom: 2px solid $input-border-base-color;
+  /*outline: 1px solid $border-color-var;
+  outline-offset: 1px; */
+
+  /* &--email,
+  &--tel {
+    padding-right: $input-height;
+  }
+
+  &[required]:invalid {
+    outline: 2px solid $border-color-input-error;
+    outline-offset: 0;
+  }
+
+  &:hover,
+  &[required]:hover {
+    outline: 1px solid $border-color-fourth;
+    outline-offset: 1px;
+  }
+
+  &:focus,
+  &[required]:focus,
+  &:active,
+  &[required]:active {
+    outline: 2px solid $border-color-input-active;
+    outline-offset: 0;
+  } */
+
+  /* @include tablet-width() {
+    height: $input-height-tablet;
+    padding: 13px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--email,
+    &--tel {
+      padding-right: $input-height-tablet;
+    }
+  } */
+}
+
+/* .form-fieldset__input-wrapper {
+  position: relative;
+
+  width: 100%;
+} */
+
+/* .form-fieldset__input-icon {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+
+  transform: translateX(-33px) translateY(-50%);
+
+  fill: $header-small-color;
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
+
+  &--tel {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include desktop-width {
+    transform: translateX(-38px) translateY(-50%);
+  }
+} */
+
+/* .form-fieldset__input:invalid + .form-fieldset__input-icon {
+  fill: $border-color-input-error;
+}
+
+.form-fieldset__input:hover + .form-fieldset__input-icon {
+  fill: $header-small-color;
+}
+
+.form-fieldset__input:focus + .form-fieldset__input-icon,
+.form-fieldset__input:active + .form-fieldset__input-icon {
+  fill: $bg-color-third;
+} */
+
+.form-fieldset__textarea {
+  width: 100%;
+  min-height: 141px;
+  margin: 0;
+  padding: 13px 15px;
+
+  @include font-options($font-regular, 17px, 18px, $text-base-color);
+
+  background: none;
+  border: 2px solid $textarea-border-base-color;
+  resize: none;
+  overflow: auto;
+  outline: none;
+
+  /* &:hover {
+    border-color: $border-color-fourth;
+  }
+
+  &:focus,
+  &:active {
+    border-color: transparent;
+    outline: 2px solid $border-color-input-active;
+  } */
+
+  /* @include tablet-width() {
+    min-height: 174px;
+    padding: 10px 17px;
+
+    font-size: 20px;
+    line-height: 30px;
+  } */
+}
+
+
+/*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
+
+.form-fieldset__choice-label {
+  display: block; //flex;
+  //align-items: center;
+
+  //margin: auto 0;
+  margin: 0;
+  padding-top: 9px;
+
+  @include font-options($font-bold, 17px, 18px, $text-title-color);
+
+  @include custom-choice($form-choice-size);
+
+  /* @include tablet-width() {
+    @include custom-choice($form-choice-size-tablet);
+  } */
+}
+/*
+//  hover
+.form-fieldset__choice-input:hover ~ .form-fieldset__choice-label {
+  @include custom-choice--hover();
+}
+
+//  фокус
+.form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
+  @include custom-choice--focus();
+}
+
+//  активный
+.form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
+  @include custom-choice--checked($form-choice-size);
+
+  @include tablet-width() {
+    @include custom-choice--checked($form-choice-size-tablet);
+  }
+} */
