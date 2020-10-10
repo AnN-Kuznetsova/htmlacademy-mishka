@@ -10,8 +10,4 @@
 
 .user-nav__link {
   @include nav-link();
-
-  /* &:last-child {
-    border-bottom: 1px solid $border-color-grey;
-  } */
 }

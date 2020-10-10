@@ -12,9 +12,11 @@
       <div class="page-header__container">
 
         <!-- Логотип -->
-        <a class="page-header__logo  logo" href="index.html">
-          <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта «Мишка»" />
-        </a>
+        <div class="page-header__logo-wrapper">
+          <a class="page-header__logo  logo" href="index.html">
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта «Мишка»" />
+          </a>
+        </div>
 
         <!-- Главное меню -->
         <nav class="main-nav  main-nav--opened  main-nav--nojs">
@@ -171,26 +173,30 @@
 
     <!-- Модальное окно - Добавление в корзину -->
     <section class="modal  modal--add-cart">
-      <h2 class="modal-title">Добавить в корзину</h2>
-      <p class="modal-description">Выберите размер:</p>
-      <form class="modal__form  add-cart-form" action="https://echo.htmlacademy.ru" method="POST">
-        <ul class="add-cart-form__list">
-          <li class="add-cart-form__item">
-            <input class="visually-hidden" id="s-size" type="radio" name="size-select" value="s" checked>
-            <label class="add-cart-form__label" for="s-size">S</label>
-          </li>
-          <li class="add-cart-form__item">
-            <input class="visually-hidden" id="m-size" type="radio" name="size-select" value="m">
-            <label class="add-cart-form__label" for="m-size">M</label>
-          </li>
-          <li class="add-cart-form__item">
-            <input class="visually-hidden" id="l-size" type="radio" name="size-select" value="l">
-            <label class="add-cart-form__label" for="l-size">L</label>
-          </li>
-        </ul>
+      <div class=" modal__container">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+        <form class="modal__form  add-cart-form" action="https://echo.htmlacademy.ru" method="POST">
+          <ul class="add-cart-form__list">
+            <li class="add-cart-form__item">
+              <input class="visually-hidden" id="s-size" type="radio" name="size-select" value="s" checked>
+              <label class="add-cart-form__label" for="s-size">S</label>
+            </li>
+            <li class="add-cart-form__item">
+              <input class="visually-hidden" id="m-size" type="radio" name="size-select" value="m">
+              <label class="add-cart-form__label" for="m-size">M</label>
+            </li>
+            <li class="add-cart-form__item">
+              <input class="visually-hidden" id="l-size" type="radio" name="size-select" value="l">
+              <label class="add-cart-form__label" for="l-size">L</label>
+            </li>
+          </ul>
 
-        <button class="modal__button  button" type="submit">Добавить</button>
-      </form>
+          <button class="modal__button  button" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
