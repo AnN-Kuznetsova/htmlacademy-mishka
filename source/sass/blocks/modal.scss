@@ -1,8 +1,26 @@
+.modal {
+  position: fixed;
+  z-index: 10;
+
+  display: none;
+
+  background-color: $bg-color-base;
+
+  &--add-cart {
+    top: 150px;
+    left: 0;
+  }
+}
+
+.modal-show {
+  display: block;
+}
+
 .modal__container {
   @include container(320px, 30px, 31px, 46px);
 
   border-top: 1px solid $border-color-grey-4;
-  box-shadow: 0 5px 0 10 rgba($shadow-base-color, 0.25);
+  box-shadow: 0 5px 10px 0 rgba($shadow-base-color, 0.25);
 }
 
 .modal__title {

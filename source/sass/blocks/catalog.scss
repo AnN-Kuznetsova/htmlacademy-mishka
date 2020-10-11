@@ -1,3 +1,8 @@
+.catalog {
+  position: relative;
+  z-index: 5;
+}
+
 .catalog__container {
   @include container(320px, 30px, 30px, 30px);
 }
