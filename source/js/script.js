@@ -34,10 +34,9 @@ const onAddCartModalClose = () => {
 
 siteWrapper.addEventListener(`click`, () => {
   if (siteWrapper.classList.contains(`site-wrapper--modal`) && addCartModal) {
-    console.log(`click`);
-    //onAddCartModalClose();
+    onAddCartModalClose();
   }
-});
+}, true);
 
 addCartButtons.forEach((addCartBtn) => {
   addCartBtn.addEventListener(`click`, (event) => {
