@@ -12,5 +12,42 @@
   top: 50%;
   left: 50%;
 
+  width: 101px;
+  height: 77px;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
   transform: translateX(-50%) translateY(-50%);
+
+  &--play {
+    background-image: url("../img/icon-play.svg");
+    background-size: 101px 77px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &:hover,
+    &:focus {
+      background-size: 121px 92px;
+    }
+
+    &:active {
+      background-size: 81px 62px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active {
+    width: 81px;
+    height: 62px;
+
+    opacity: 0.3;
+  }
 }

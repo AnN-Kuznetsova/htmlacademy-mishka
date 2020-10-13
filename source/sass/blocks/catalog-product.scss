@@ -18,12 +18,22 @@
   position: relative;
 
   border: 1px solid $border-color-grey-3;
+  @include item-background();
 }
 
 .catalog-product__title {
   @include little-title();
 
   margin-bottom: 6px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-product__info {

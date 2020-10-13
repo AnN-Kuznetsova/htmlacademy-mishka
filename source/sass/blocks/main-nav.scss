@@ -18,21 +18,20 @@
   border: none;
   outline: none;
 
-  /* &:hover,
+  &:hover,
   &:focus {
     opacity: 0.6;
   }
 
-  &:focus {
+  /* &:focus {
     @include focus();
-  }
+  } */
 
   &:active {
     opacity: 0.3;
-    box-shadow: none;
   }
 
-  @include tablet-width() {
+  /* @include tablet-width() {
     display: none;
   } */
 }

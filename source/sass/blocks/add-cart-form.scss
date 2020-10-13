@@ -22,4 +22,13 @@
 
   border: 2px solid $border-color-grey;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $border-color-grey-4;
+  }
+}
+
+.add-cart-form__input:checked + .add-cart-form__label {
+  border: 2px solid $input-border-green-color;
 }

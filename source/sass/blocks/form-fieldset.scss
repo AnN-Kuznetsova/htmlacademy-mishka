@@ -17,6 +17,7 @@ $input-height: 52px;
   margin: 0;
 
   border: none;
+  overflow: hidden;
 
   /* &--program-select {
     margin-left: -$mobile-padding;
@@ -33,15 +34,15 @@ $input-height: 52px;
 }
 
 .form-fieldset__legend {
-  @include font-options($font-bold, 17px, 17px, $text-form-legend-color);
-
+  position: relative;
   display: block;
-
   width: min-content;
-  padding: 0;
-  padding-bottom: 29px;
+  padding: 0 22px 29px 0;
 
+  @include font-options($font-bold, 17px, 17px, $text-form-legend-color);
   text-transform: uppercase;
+
+  background-color: $bg-color-base;
 
   &--choice {
     padding-bottom: 25px;
@@ -52,8 +53,21 @@ $input-height: 52px;
     padding-bottom: 6px;
   }
 
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 9px;
+    left: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: $input-border-green-color;
+  }
+
   /* @include tablet-width() {
-    width: fit-content; //auto;
+    width: fit-content;
     margin-bottom: 76px;
   } */
 }
@@ -178,32 +192,25 @@ $input-height: 52px;
   background: none;
   border: none;
   border-bottom: 2px solid $input-border-base-color;
-  /*outline: 1px solid $border-color-var;
-  outline-offset: 1px; */
+  outline: none;
 
-  /* &--email,
+  &::placeholder {
+    @include font-options($font-regular, 17px, 18px, rgba($text-base-color, 0.3));
+  }
+
+  &--email,
   &--tel {
     padding-right: $input-height;
   }
 
-  &[required]:invalid {
-    outline: 2px solid $border-color-input-error;
-    outline-offset: 0;
-  }
-
-  &:hover,
-  &[required]:hover {
-    outline: 1px solid $border-color-fourth;
-    outline-offset: 1px;
+  &:hover {
+    border-color: $input-border-green-color;
   }
 
   &:focus,
-  &[required]:focus,
-  &:active,
-  &[required]:active {
-    outline: 2px solid $border-color-input-active;
-    outline-offset: 0;
-  } */
+  &:active {
+    border-color: $input-border-green-color;
+  }
 
   /* @include tablet-width() {
     height: $input-height-tablet;
@@ -276,15 +283,18 @@ $input-height: 52px;
   overflow: auto;
   outline: none;
 
-  /* &:hover {
-    border-color: $border-color-fourth;
+  &::placeholder {
+    @include font-options($font-regular, 17px, 18px, rgba($text-base-color, 0.3));
+  }
+
+  &:hover {
+    border-color: $input-border-green-color;
   }
 
   &:focus,
   &:active {
-    border-color: transparent;
-    outline: 2px solid $border-color-input-active;
-  } */
+    border-color: $input-border-green-color;
+  }
 
   /* @include tablet-width() {
     min-height: 174px;
@@ -314,22 +324,27 @@ $input-height: 52px;
     @include custom-choice($form-choice-size-tablet);
   } */
 }
-/*
+
 //  hover
 .form-fieldset__choice-input:hover ~ .form-fieldset__choice-label {
-  @include custom-choice--hover();
+  color: $input-border-green-color;
+}
+
+//  active
+.form-fieldset__choice-input:active ~ .form-fieldset__choice-label {
+  color: $border-color-grey-4;
 }
 
 //  фокус
-.form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
+/* .form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
   @include custom-choice--focus();
-}
+} */
 
-//  активный
+//  checked
 .form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
   @include custom-choice--checked($form-choice-size);
 
-  @include tablet-width() {
+  /* @include tablet-width() {
     @include custom-choice--checked($form-choice-size-tablet);
-  }
-} */
+  } */
+}

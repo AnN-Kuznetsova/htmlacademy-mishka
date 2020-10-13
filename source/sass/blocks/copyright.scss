@@ -12,4 +12,8 @@
 
 .copyright__intro {
   @include font-options($font-bold, 19px, 18px, $text-title-color);
+
+  &:active {
+    opacity: 0.3;
+  }
 }

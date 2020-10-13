@@ -25,7 +25,7 @@
             </button>
             <ul class="main-nav__list  site-nav">
               <li class="site-nav__item  site-nav__item--active">
-                <a class="site-nav__link">Каталог товаров</a>
+                <a class="site-nav__link  site-nav__link--active">Каталог товаров</a>
               </li>
               <li class="site-nav__item">
                 <a class="site-nav__link" href="form.html">Вязание на заказ</a>
@@ -121,7 +121,7 @@
             <div class="making__player  player">
               <div class="player__wrapper">
                 <video class="player__video" src="#" poster="img/video-mobile@1x.jpg" width="260" height="150" aria-label="Кино о создании милых штук."></video>
-                <button class="player__button  player-button  player-button--play">
+                <button class="player__button  player__button--play">
                   <span class="visually-hidden">Play</span>
                 </button>
               </div>
@@ -180,20 +180,20 @@
         <form class="modal__form  add-cart-form" action="https://echo.htmlacademy.ru" method="POST">
           <ul class="add-cart-form__list">
             <li class="add-cart-form__item">
-              <input class="visually-hidden" id="s-size" type="radio" name="size-select" value="s" checked>
+              <input class="visually-hidden  add-cart-form__input" id="s-size" type="radio" name="size-select" value="s" checked>
               <label class="add-cart-form__label" for="s-size">S</label>
             </li>
             <li class="add-cart-form__item">
-              <input class="visually-hidden" id="m-size" type="radio" name="size-select" value="m">
+              <input class="visually-hidden  add-cart-form__input" id="m-size" type="radio" name="size-select" value="m">
               <label class="add-cart-form__label" for="m-size">M</label>
             </li>
             <li class="add-cart-form__item">
-              <input class="visually-hidden" id="l-size" type="radio" name="size-select" value="l">
+              <input class="visually-hidden  add-cart-form__input" id="l-size" type="radio" name="size-select" value="l">
               <label class="add-cart-form__label" for="l-size">L</label>
             </li>
           </ul>
 
-          <button class="modal__button  button" type="submit">Добавить</button>
+          <button class="modal__button  button  button--green" type="submit">Добавить</button>
         </form>
       </div>
     </section>

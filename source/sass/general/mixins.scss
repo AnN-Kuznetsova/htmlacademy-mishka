@@ -73,8 +73,33 @@
 
   text-align: left;
 
-  //cursor: default;
-  //outline: none;
+  cursor: pointer;
+  outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    color: $link-text-color-hover;
+    cursor: default;
+  }
+}
+
+@mixin item-background() {
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba($shadow-base-color, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba($shadow-base-color, 0.1);
+  }
 }
 
 //  линейные бордеры на всю ширину
@@ -142,25 +167,18 @@
     border-radius: 50%;
   }
 
-  /* &:hover::before {
-    border-color: $border-color-fifth;
+  &:hover::before {
+    border-color: $input-border-green-color;
   }
 
-  &:active {
-    opacity: 0.3;
-  } */
+  &:active::before {
+    border-color: $border-color-grey-4;
+  }
 
   /* @include tablet-width() {
     padding-left: $choice-size +  20px;
   } */
 }
-
-//  hover
-/* @mixin custom-choice--hover() {
-  &::before {
-    border-color: $border-color-fifth;
-  }
-} */
 
 //  фокус
 /* @mixin custom-choice--focus() {
@@ -177,8 +195,8 @@
   }
 } */
 
-// активный
-/* @mixin custom-choice--checked($choice-size: 40px) {
+// checked
+@mixin custom-choice--checked($choice-size: 39px) {
   &::after {
     position: absolute;
     content: "";
@@ -186,16 +204,16 @@
 
   //  радиокнопки
   &--radio::after {
-    top: 50%;
+    top: ($choice-size - $choice-size / 2.4) / 2;
     left: ($choice-size / 2);
 
-    width: ($choice-size / 2.3);
-    height: ($choice-size / 2.3);
+    width: ($choice-size / 2.4);
+    height: ($choice-size / 2.4);
 
-    background-color: $bg-color-third;
+    background-color: $input-border-green-color;
     border-radius: 50%;
 
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 
   //  чекбоксы
@@ -208,9 +226,9 @@
 
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
-    background-size: 21px 16px;
+    background-size: 22px 16px;
     background-position: center center;
 
     transform: translateY(-50%);
   }
-} */
+}

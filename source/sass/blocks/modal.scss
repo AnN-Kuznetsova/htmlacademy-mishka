@@ -39,10 +39,3 @@
   @include font-options($font-regular, 15px, 30px, $text-base-color);
   text-align: center;
 }
-
-.modal__button {
-  color: $text-second-color;
-
-  background-color: $bg-color-green-light;
-  border: none;
-}

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -26,8 +27,8 @@
             <li class="site-nav__item  site-nav__item--active">
               <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link">Вязание на заказ</a>
+            <li class="site-nav__item  site-nav__item--active">
+              <a class="site-nav__link  site-nav__link--active">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list  user-nav">
@@ -82,27 +83,27 @@
                     <ul class="form-fieldset__list">
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="white-select" type="checkbox" name="white-select" checked>
-                        <label class="form-fieldset__choice-label" for="white-select">Белый</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="white-select">Белый</label>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="grey-select" type="checkbox" name="grey-select" checked>
-                        <label class="form-fieldset__choice-label" for="grey-select">Серый</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="grey-select">Серый</label>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="tiffany-select" type="checkbox" name="tiffany-select">
-                        <label class="form-fieldset__choice-label" for="tiffany-select">«Тиффани»</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="tiffany-select">«Тиффани»</label>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="black-select" type="checkbox" name="black-select">
-                        <label class="form-fieldset__choice-label" for="black-select">Черный</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="black-select">Черный</label>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="pink-select" type="checkbox" name="pink-select">
-                        <label class="form-fieldset__choice-label" for="pink-select">Розовый</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="pink-select">Розовый</label>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="orange-select" type="checkbox" name="orange-select">
-                        <label class="form-fieldset__choice-label" for="orange-select">Оранжевый</label>
+                        <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="orange-select">Оранжевый</label>
                       </li>
                     </ul>
                   </fieldset>
@@ -130,11 +131,11 @@
                 </li>
                 <li class="client-data__item  form-fieldset">
                   <label class="form-fieldset__legend  form-fieldset__legend--tel" for="client-tel">Тел</label>
-                  <input class="form-fieldset__input" id="client-tel" type="tel" name="client-tel" value="" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+                  <input class="form-fieldset__input  form-fieldset__input--tel" id="client-tel" type="tel" name="client-tel" value="" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
                 </li>
                 <li class="client-data__item  form-fieldset">
                   <label class="form-fieldset__legend  form-fieldset__legend--email" for="client-email">e&#8209;mail</label>
-                  <input class="form-fieldset__input" id="client-email" type="email" name="client-email" value="" placeholder="Ваш Email*" required>
+                  <input class="form-fieldset__input  form-fieldset__input--email" id="client-email" type="email" name="client-email" value="" placeholder="Ваш Email*" required>
                 </li>
               </ul>
             </fieldset>
@@ -147,7 +148,7 @@
               </div>
             </div>
 
-            <small class="order-form__required">*Поля обязательные для заполнения</small>
+            <small class="order-form__required">*Поля обязательны для заполнения</small>
 
             <button class="order-form__button  button" type="submit">Отправить заказ</button>
           </div>

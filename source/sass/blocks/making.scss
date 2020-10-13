@@ -17,6 +17,7 @@
   @include container(260px, 33px, 23px, 32px);
 
   border: 1px solid $border-color-grey;
+  @include item-background();
 }
 
 .making__title {

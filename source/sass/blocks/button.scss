@@ -9,47 +9,45 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: $btn-color-base;
+  background-color: $btn-base-color;
   border: 2px solid $btn-border-base-color;
   outline: none;
   cursor: pointer;
 
-/*   &:hover,
+  &:hover,
   &:focus {
-    background-color: $btn-color-base-hover;
+    background-color: $btn-base-color-hover;
     color: $btn-text-color-hover;
   }
 
-  &:focus {
-    //@include focus-button();
+  /* &:focus {
     @include focus();
-  }
+  } */
 
   &:active {
-    background-color: $btn-color-base-active;
-    color: $btn-text-color-active;
-
-    box-shadow: none;
-  } */
-
-/*   &--grey {
-    background-color: $btn-color-second;
-    color: $btn-text-color-second-base;
+    background-color: $btn-base-color-hover;
+    color:  rgba($btn-text-color-hover, 0.3);
   }
 
-  &--grey:hover,
-  &--grey:focus {
-    background-color: $btn-color-second-hover;
-    color: $btn-text-color-second-hover;
+  &--green {
+    color: $text-second-color;
+
+    background-color: $bg-color-green-light;
+    border: 2px solid $bg-color-green-light;
   }
 
-  &--grey:focus {
-    //@include focus-button($btn-text-color-second-hover, $btn-color-second-hover);
+  &--green:hover,
+  &--green:focus {
+    background-color: $text-second-color;
+    color: $bg-color-green-light;
+  }
+
+  /* &--green:focus {
     @include focus();
-  }
-
-  &--grey:active {
-    background-color: $btn-color-second-active;
-    color: $btn-text-color-second-active;
   } */
+
+  &--green:active {
+    background-color: $text-second-color;
+    color: rgba($bg-color-green-light, 0.3);
+  }
 }
