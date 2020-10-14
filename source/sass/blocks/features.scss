@@ -13,7 +13,60 @@
 }
 
 .features__item {
+  position: relative;
+
   @include font-options($font-bold, 17px, 20px, $text-title-color);
 
   padding: 55px 0 28px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -6px;
+    width: 55px;
+    height: 55px;
+  }
+
+  &--flower::before {
+  background-image: url("../img/icon-feature-flower.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 37px;
+  background-position: 14px 2px;
+  }
+
+  &--money::before {
+    background-image: url("../img/icon-feature-money.svg");
+    background-repeat: no-repeat;
+    background-size: 47px 27px;
+    background-position: 6px 3px;
+  }
+
+  &--heart::before {
+    background-image: url("../img/icon-feature-heart.svg");
+    background-repeat: no-repeat;
+    background-size: 34px 27px;
+    background-position: 13px 8px;
+  }
+
+  &--ball::before {
+    background-image: url("../img/icon-feature-ball.svg");
+    background-repeat: no-repeat;
+    background-size: 35px 34px;
+    background-position: 9px 5px;
+  }
+
+  &--rocket::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-repeat: no-repeat;
+    background-size: 55px 23px;
+    background-position: 0 6px;
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-feature-gift.svg");
+    background-repeat: no-repeat;
+    background-size: 33px 32px;
+    background-position: 9px 4px;
+  }
 }
