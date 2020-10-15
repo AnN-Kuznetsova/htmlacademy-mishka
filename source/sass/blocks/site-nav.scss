@@ -11,3 +11,7 @@
 .site-nav__link {
   @include nav-link();
 }
+
+.site-nav__link-text {
+  @include nav-link-text();
+}

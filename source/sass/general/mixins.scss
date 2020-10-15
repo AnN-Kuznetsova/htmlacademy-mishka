@@ -66,6 +66,7 @@
 @mixin nav-link {
   @include little-title();
 
+  position: relative;
   display: block;
 
   margin: 0;
@@ -86,8 +87,15 @@
   }
 
   &--active {
-    color: $link-text-color-hover;
     cursor: default;
+  }
+}
+
+@mixin nav-link-text {
+  &--active {
+    box-shadow:
+      0 4px 0 0 $bg-color-base,
+      0 6px 0 0 $link-text-color-hover;
   }
 }
 

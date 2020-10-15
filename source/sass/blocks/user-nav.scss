@@ -11,3 +11,7 @@
 .user-nav__link {
   @include nav-link();
 }
+
+.user-nav__link-text {
+  @include nav-link-text();
+}
