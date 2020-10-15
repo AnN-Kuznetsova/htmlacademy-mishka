@@ -4,16 +4,35 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 15px 37px 10px;
+  padding: 19px 39px 10px 37px;
 
   outline: none;
   border-top: 1px solid $border-color-grey-2;
-}
 
-.copyright__intro {
-  @include font-options($font-bold, 19px, 18px, $text-title-color);
+  &:hover .copyright__image,
+  &:focus .copyright__image {
+    fill: $copyright-image-color-hover;
+  }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.copyright__intro {
+  @include font-options($font-bold, 19px, 18px, $text-title-color);
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  padding-top: 4px;
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
+
+  fill: $copyright-image-color-base;
+  pointer-events: none;
 }
