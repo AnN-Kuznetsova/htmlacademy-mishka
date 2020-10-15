@@ -18,6 +18,7 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "7.0.1",
+    "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
     "imagemin-jpegtran": "7.0.0",
     "posthtml-include": "1.5.0",
