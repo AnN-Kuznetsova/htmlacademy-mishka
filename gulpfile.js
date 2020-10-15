@@ -10,6 +10,7 @@ const server = require("browser-sync").create();
 
 const imagemin = require("gulp-imagemin");
 const imageminJpegtran = require("imagemin-jpegtran");
+const webp = require("gulp-webp");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -45,6 +46,13 @@ gulp.task("images", function () {
       imagemin.svgo(),
       imageminJpegtran({progressive: true})
     ]))
+    .pipe(gulp.dest("source/img"));
+});
+
+//  Создание WebP-изображений
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
 
