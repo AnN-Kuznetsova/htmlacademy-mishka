@@ -13,6 +13,7 @@ const imageminJpegtran = require("imagemin-jpegtran");
 const webp = require("gulp-webp");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -55,6 +56,16 @@ gulp.task("images", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
+
+//  Сборка SVG-спрайта
+gulp.task("sprite", function () {
+  return gulp.src("source/img/{icon-*,logo-*,htmlacademy}.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
 });
 

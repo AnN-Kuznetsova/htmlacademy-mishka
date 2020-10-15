@@ -15,6 +15,7 @@
     "gulp-rename": "2.0.0",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "7.0.1",
     "gulp-webp": "4.0.1",
     "imagemin-jpegtran": "7.0.0",
     "stylelint": "10.1.x",
