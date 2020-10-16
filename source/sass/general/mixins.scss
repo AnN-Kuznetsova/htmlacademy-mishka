@@ -63,6 +63,31 @@
   text-transform: none;
 }
 
+@mixin nav-item {
+  position: relative;
+
+  @include decorative-line-border();
+
+  &:hover svg,
+  &:focus svg {
+    fill: $cart-icon-color-hover;
+  }
+
+  &:active svg {
+    fill: rgba($cart-icon-color-hover, 0.3);
+  }
+}
+
+@mixin nav-image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  fill: rgba($cart-icon-color-base, 0.2);
+
+  transform: translateY(-50%);
+}
+
 @mixin nav-link {
   @include little-title();
 

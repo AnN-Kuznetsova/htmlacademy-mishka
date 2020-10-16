@@ -3,13 +3,15 @@
 }
 
 .site-nav__item {
-  position: relative;
-
-  @include decorative-line-border();
+  @include nav-item();
 }
 
 .site-nav__link {
   @include nav-link();
+}
+
+.user-nav__image {
+  @include nav-image();
 }
 
 .site-nav__link-text {
