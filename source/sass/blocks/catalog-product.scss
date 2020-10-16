@@ -13,9 +13,7 @@
 }
 
 .catalog-product__wrapper {
-  @include container(260px, 28px, 26px, 26px);
-
-  position: relative;
+  @include container(260px, 28px, 26px, 19px);
 
   border: 1px solid $border-color-grey-3;
   @include item-background();
@@ -42,8 +40,16 @@
   margin: 0;
   padding: 0;
   padding-bottom: 18px;
+}
 
-  border-bottom: 1px solid $border-color-grey;
+.catalog-product__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 13px;
+
+  border-top: 1px solid $border-color-grey;
 }
 
 .catalog-product__price {
@@ -51,21 +57,30 @@
 
   margin: 0;
   padding: 0;
-  padding-top: 22px;
 }
 
 .catalog-product__add-cart-link {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   width: 40px;
   height: 40px;
 
-  outline: 1px solid red;
+  &:hover .catalog-product__add-cart-image,
+  &:focus .catalog-product__add-cart-image {
+    fill: $cart-icon-color-hover;
+  }
+
+  &:active .catalog-product__add-cart-image {
+    fill: rgba($cart-icon-color-hover, 0.3);
+  }
 }
 
 .catalog-product__add-cart-image {
   width: 20px;
   height: 19px;
+
+  fill: rgba($cart-icon-color-base, 0.2);
+  pointer-events: none;
 }

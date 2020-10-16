@@ -23,8 +23,24 @@
 .making__title {
   @include little-title();
 
+  position: relative;
+
   margin-bottom: 201px;
   padding-left: 56px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 11px;
+    left: 0;
+    z-index: 2;
+    width: 32px;
+    height: 22px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .making__description {
