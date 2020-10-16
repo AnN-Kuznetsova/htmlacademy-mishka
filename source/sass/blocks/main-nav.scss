@@ -2,6 +2,9 @@
   position: relative;
 }
 
+
+//  Стилизация кнопки открытия меню
+
 .main-nav__toggle {
   position: absolute;
   top: -61px;
@@ -88,4 +91,84 @@
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
+}
+
+
+//  Стилизация меню
+
+.main-nav__list {
+  @include list-style-none();
+}
+
+.main-nav__item {
+  position: relative;
+
+  @include decorative-line-border();
+
+  &:hover .main-nav__image,
+  &:focus .main-nav__image {
+    fill: $cart-icon-color-hover;
+  }
+
+  &:active .main-nav__image {
+    fill: rgba($cart-icon-color-hover, 0.3);
+  }
+}
+
+.main-nav__image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  fill: rgba($cart-icon-color-base, 0.2);
+
+  transform: translateY(-50%);
+
+  &--search {
+    width: 18px;
+    height: 18px;
+
+    transform: translateX(2px) translateY(calc(-50% + 2px));
+  }
+
+  &--cart {
+    width: 21px;
+    height: 18px;
+  }
+}
+
+.main-nav__link {
+  @include little-title();
+
+  position: relative;
+  display: block;
+
+  margin: 0;
+  padding: 27px 0 28px 45px;
+
+  text-align: left;
+
+  cursor: pointer;
+  outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    cursor: default;
+  }
+}
+
+.main-nav__link-text {
+  &--active {
+    box-shadow:
+      0 4px 0 0 $bg-color-base,
+      0 6px 0 0 $link-text-color-hover;
+  }
 }
