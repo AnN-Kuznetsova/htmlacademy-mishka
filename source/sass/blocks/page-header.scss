@@ -3,7 +3,7 @@
 }
 
 .page-header__container {
-  @include container(320px, 30px, 0, 0);
+  @include container(320px, $mobile-padding, 0, 0);
 }
 
 .page-header__logo-wrapper {

@@ -1,5 +1,5 @@
 .features__container {
-  @include container(320px, 30px, 27px, 20px);
+  @include container(320px, $mobile-padding, 27px, 20px);
 }
 
 .features__title {

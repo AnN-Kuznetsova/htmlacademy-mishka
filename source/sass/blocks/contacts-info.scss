@@ -1,5 +1,5 @@
 .contacts-info__container {
-  @include container(320px, 30px, 35px, 5px);
+  @include container(320px, $mobile-padding, 35px, 5px);
 }
 
 .contacts-info__title {

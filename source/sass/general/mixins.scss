@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-@mixin container($container-width: 320px, $container-padding: 30px, $container-padding-top: 0, $container-padding-bottom: 0) {
+@mixin container($container-width: $mobile-width, $container-padding: $mobile-padding, $container-padding-top: 0, $container-padding-bottom: 0) {
   min-width: $container-width;
   max-width: 1300px;
   margin: 0 auto;

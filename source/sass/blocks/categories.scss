@@ -11,7 +11,7 @@
 .categories__intro {
   @include big-title();
 
-  padding: 71px 30px 123px;
+  padding: 71px $mobile-padding 123px;
 
   background-color: transparent;
 }
@@ -89,7 +89,7 @@
   width: 100%;
   min-height: 103px;
   margin: 0;
-  padding: 25px 130px 25px 30px;
+  padding: 25px 130px 25px $mobile-padding;
 
   font-weight: normal;
   text-transform: none;

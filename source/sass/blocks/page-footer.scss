@@ -3,5 +3,5 @@
 }
 
 .page-footer__container {
-  @include container(320px, 30px, 8px, 19px);
+  @include container(320px, $mobile-padding, 8px, 19px);
 }

@@ -34,5 +34,5 @@
 } */
 
 .contacts__button {
-  @include container(320px, 30px, 38px, 40px);
+  @include container(320px, $mobile-padding, 38px, 40px);
 }

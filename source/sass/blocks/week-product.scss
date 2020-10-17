@@ -5,7 +5,7 @@
 }
 
 .week-product__container {
-  @include container(320px, 30px, 28px, 42px);
+  @include container(320px, $mobile-padding, 28px, 42px);
 }
 
 .week-product__intro {

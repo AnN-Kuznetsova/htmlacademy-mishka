@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  //min-width: 320px;
-  width: 320px;
+  min-width: $mobile-width;
+  //width: $mobile-width;
   //width: $tablet-width;
   //width: $desktop-width;
 
