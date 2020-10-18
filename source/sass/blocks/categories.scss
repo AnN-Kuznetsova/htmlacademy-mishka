@@ -6,6 +6,34 @@
   background-position: center -18px;
   background-repeat: no-repeat;
   background-size: 575px 375px;
+  border-top: 1px solid $border-color-grey;
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+
+    position: relative;
+    margin-top: -61px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 1150px 746px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 12px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+      background-size: 768px 23px;
+    }
+  }
 }
 
 .categories__intro {
@@ -14,10 +42,30 @@
   padding: 71px $mobile-padding 123px;
 
   background-color: transparent;
+
+  @include tablet-width() {
+    padding: 154px $tablet-padding 374px;
+  }
+}
+
+.categories__intro-text {
+  display: block;
+  max-width: 260px;
+  margin: auto;
+
+  @include tablet-width() {
+    max-width: 700px;
+  }
 }
 
 .categories__list {
   @include list-style-none();
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .categories__item {
@@ -79,6 +127,18 @@
     background-repeat: no-repeat;
     background-position: 10px 0;
   }
+
+  @include tablet-width() {
+    width: 50%;
+
+    &--interior::after {
+      background-position: 20px 9px;
+    }
+
+    &--toy::after {
+      background-position: 3px 10px;
+    }
+  }
 }
 
 .categories__link {
@@ -106,4 +166,15 @@
 
     opacity: 0.3;
   }
+
+  @include tablet-width() {
+    min-height: 119px;
+    padding: 27px 130px 27px 35px;
+
+    @include font-options($font-bold, 20px, 30px, $text-second-color);
+  }
+}
+
+.categories__link-text {
+  max-width: 175px;
 }

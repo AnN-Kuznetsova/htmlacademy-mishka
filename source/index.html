@@ -21,7 +21,11 @@
           <!-- Логотип -->
           <div class="page-header__logo-wrapper">
             <a class="page-header__logo  logo">
-              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта «Мишка»" />
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg" />
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
+                <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта «Мишка»" />
+              </picture>
             </a>
           </div>
 
@@ -30,6 +34,7 @@
             <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
+
             <ul class="main-nav__list  main-nav__list--site-nav">
               <li class="main-nav__item">
                 <a class="main-nav__link" href="catalog.html">
@@ -42,8 +47,9 @@
                 </a>
               </li>
             </ul>
+
             <ul class="main-nav__list  main-nav__list--user-nav">
-              <li class="main-nav__item">
+              <li class="main-nav__item  main-nav__item--search">
                 <svg class="main-nav__image  main-nav__image--search" width="18" height="18" focusable="false">
                   <use xlink:href="#icon-search"></use>
                 </svg>
@@ -60,6 +66,8 @@
                 </a>
               </li>
             </ul>
+
+            <p class="page-header__delivery">Бесплатная доставка по России</p>
           </nav>
         </div>
       </header>
@@ -72,13 +80,19 @@
         <section class="categories">
           <div class="categories__container">
             <h2 class="visually-hidden">Категории товаров</h2>
-            <b class="categories__intro">Милые штуки ручной работы&nbsp;для&nbsp;дома</b>
+            <b class="categories__intro">
+              <span class="categories__intro-text">Милые штуки ручной работы&nbsp;для&nbsp;дома</span>
+            </b>
             <ul class="categories__list">
               <li class="categories__item  categories__item--interior">
-                <a class="categories__link" href="#">Предметы интерьера</a>
+                <a class="categories__link" href="#">
+                  <span class="categories__link-text">Предметы интерьера</span>
+                </a>
               </li>
               <li class="categories__item  categories__item--toy">
-                <a class="categories__link" href="#">Детские игрушки</a>
+                <a class="categories__link" href="#">
+                  <span class="categories__link-text">Детские игрушки</span>
+                </a>
               </li>
             </ul>
           </div>

@@ -12,3 +12,13 @@
     opacity: 0.3;
   }
 }
+
+.logo__image {
+  width: 86px;
+  height: 35px;
+
+  @include tablet-width() {
+    width: 112px;
+    height: 46px;
+  }
+}

@@ -16,6 +16,30 @@
   padding: $container-padding-top $container-padding $container-padding-bottom;
 }
 
+@mixin mobile-width-only() {
+  @media (max-width: $mobile-width-only) {
+    @content;
+  }
+}
+
+@mixin tablet-width() {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-width() {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin retina-2x() {
+  @media (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
 @mixin list-style-none {
   margin: 0;
   padding: 0;
@@ -43,6 +67,10 @@
   text-align: center;
 
   background-color: $bg-color-grey;
+
+  @include tablet-width() {
+    @include font-options($font-bold, 43px, 50px, $text-title-color);
+  }
 }
 
 @mixin regular-title {

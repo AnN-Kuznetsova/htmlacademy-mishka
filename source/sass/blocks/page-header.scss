@@ -3,23 +3,56 @@
 }
 
 .page-header__container {
-  @include container(320px, $mobile-padding, 0, 0);
+  @include container($mobile-width, $mobile-padding, 0, 0);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+
+    position: relative;
+    margin-top: -79px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .page-header__logo-wrapper {
-
   position: relative;
 
   display: flex;
   justify-content: center;
 
-  @include decorative-line-border();
-
   &::after {
     transform: translateX(-50%) translateY(79px);
+  }
+
+  @include mobile-width-only() {
+    @include decorative-line-border();
+  }
+
+  @include tablet-width() {
+    z-index: 10;
+    top: 101px;
+    left: -2px;
   }
 }
 
 .page-header__logo {
   margin: 22px 0 15px;
+
+  @include tablet-width() {
+    margin: 0;
+  }
+}
+
+.page-header__delivery {
+  display: none;
+
+  @include tablet-width() {
+    display: block;
+    margin-top: 18px;
+
+    @include font-options($font-regular, 15px, 24px, $text-base-color);
+  }
 }

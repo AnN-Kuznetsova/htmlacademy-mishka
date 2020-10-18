@@ -1,5 +1,17 @@
 .main-nav {
   position: relative;
+
+  background-color: transparent;
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 5;
+
+    width: 100%
+  }
 }
 
 
@@ -15,7 +27,7 @@
   width: 40px;
   height: 40px;
 
-  background-color: $bg-color-base;
+  background-color: transparent;
 
   cursor: pointer;
   border: none;
@@ -34,9 +46,9 @@
     opacity: 0.3;
   }
 
-  /* @include tablet-width() {
+  @include tablet-width() {
     display: none;
-  } */
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -82,11 +94,11 @@
 } */
 
 .main-nav--closed .main-nav__list {
-  //@include mobile-width-only() {
+  @include mobile-width-only() {
     display: none;
 
     min-height: 0;
-  //}
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -98,12 +110,27 @@
 
 .main-nav__list {
   @include list-style-none();
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &--site-nav {
+      width: 50%;
+    }
+
+    &--user-nav {
+      order: -1;
+      justify-content: flex-end;
+
+      width: 100%;
+    }
+  }
 }
 
 .main-nav__item {
   position: relative;
-
-  @include decorative-line-border();
 
   &:hover .main-nav__image,
   &:focus .main-nav__image {
@@ -112,6 +139,23 @@
 
   &:active .main-nav__image {
     fill: rgba($cart-icon-color-hover, 0.3);
+  }
+
+  @include mobile-width-only() {
+    @include decorative-line-border();
+  }
+}
+
+.main-nav__list--site-nav .main-nav__item {
+  @include tablet-width() {
+    width: 50%;
+  }
+}
+
+.main-nav__list--user-nav .main-nav__item {
+  @include tablet-width() {
+    padding-left: 82px;
+    border-left: 1px solid $border-color-grey;
   }
 }
 
@@ -134,6 +178,16 @@
   &--cart {
     width: 21px;
     height: 18px;
+  }
+
+  @include tablet-width() {
+    &--search {
+      transform: translateX(32px) translateY(6px);
+    }
+
+    &--cart {
+      transform: translateX(30px) translateY(5px);
+    }
   }
 }
 
@@ -163,6 +217,20 @@
   &--active {
     cursor: default;
   }
+
+  @include tablet-width() {
+    margin-top: 26px;
+    padding: 31px 0 34px;
+  }
+}
+
+.main-nav__list--site-nav .main-nav__link {
+  @include tablet-width() {
+    @include font-options($font-bold, 15px, 24px, $text-title-color);
+
+    margin-top: 0;
+    padding: 18px 0;
+  }
 }
 
 .main-nav__link-text {
@@ -170,5 +238,11 @@
     box-shadow:
       0 4px 0 0 $bg-color-base,
       0 6px 0 0 $link-text-color-hover;
+  }
+}
+
+.main-nav__item--search .main-nav__link-text {
+  @include tablet-width() {
+    display: none;
   }
 }
