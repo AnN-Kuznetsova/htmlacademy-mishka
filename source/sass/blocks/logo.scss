@@ -16,6 +16,11 @@
     width: 112px;
     height: 46px;
   }
+
+  @include desktop-width() {
+    width: 149px;
+    height: 72px;
+  }
 }
 
 .logo__image {
@@ -25,5 +30,10 @@
   @include tablet-width() {
     width: 112px;
     height: 46px;
+  }
+
+  @include desktop-width() {
+    width: 149px;
+    height: 72px;
   }
 }
