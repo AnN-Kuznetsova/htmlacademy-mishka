@@ -9,7 +9,7 @@
     @include container($tablet-width, $tablet-padding);
 
     position: relative;
-    margin-top: -79px;
+    margin-top: -46px;
 
     display: flex;
     flex-direction: row;
@@ -23,36 +23,22 @@
   display: flex;
   justify-content: center;
 
-  &::after {
-    transform: translateX(-50%) translateY(79px);
-  }
+  padding: 22px 0 15px;
 
   @include mobile-width-only() {
     @include decorative-line-border();
+
+    &::after {
+      transform: translateX(-50%) translateY(57px);
+    }
   }
 
   @include tablet-width() {
     z-index: 10;
-    top: 101px;
+    top: 68px;
     left: -2px;
-  }
-}
 
-.page-header__logo {
-  margin: 22px 0 15px;
-
-  @include tablet-width() {
     margin: 0;
-  }
-}
-
-.page-header__delivery {
-  display: none;
-
-  @include tablet-width() {
-    display: block;
-    margin-top: 18px;
-
-    @include font-options($font-regular, 15px, 24px, $text-base-color);
+    padding: 0;
   }
 }

@@ -1,15 +1,14 @@
 .categories__container {
-  @include container(320px, 0, 0, 0);
+  @include container($mobile-width, 0, 0, 0);
 
   background-color: $bg-color-categories;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-position: center -18px;
   background-repeat: no-repeat;
   background-size: 575px 375px;
-  border-top: 1px solid $border-color-grey;
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
+    @include container($tablet-width, 0, 0, 0);
 
     position: relative;
     margin-top: -61px;
@@ -44,7 +43,7 @@
   background-color: transparent;
 
   @include tablet-width() {
-    padding: 154px $tablet-padding 374px;
+    padding: 153px $tablet-padding 374px;
   }
 }
 
@@ -62,6 +61,8 @@
   @include list-style-none();
 
   @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

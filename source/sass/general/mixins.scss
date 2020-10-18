@@ -59,7 +59,7 @@
   position: relative;
 
   margin: 0;
-  padding: 72px 30px 76px;
+  padding: 71px 30px 76px;
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;
@@ -67,6 +67,7 @@
   text-align: center;
 
   background-color: $bg-color-grey;
+  border-top: 1px solid $border-color-grey;
 
   @include tablet-width() {
     @include font-options($font-bold, 43px, 50px, $text-title-color);

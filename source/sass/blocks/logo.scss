@@ -11,6 +11,11 @@
   &[href]:active {
     opacity: 0.3;
   }
+
+  @include tablet-width() {
+    width: 112px;
+    height: 46px;
+  }
 }
 
 .logo__image {
