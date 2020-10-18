@@ -33,6 +33,22 @@
       background-size: 768px 23px;
     }
   }
+
+  @include desktop-width() {
+    @include container(100%, 0, 0, 0);
+
+    margin-top: -61px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-size: 1150px 746px;
+
+    &::after {
+      height: 18px;
+
+      background-position: -50px 0;
+      background-size: 1250px 36px;
+    }
+  }
 }
 
 .categories__intro {
@@ -44,6 +60,10 @@
 
   @include tablet-width() {
     padding: 153px $tablet-padding 374px;
+  }
+
+  @include desktop-width() {
+    padding: 153px $desktop-padding 360px;
   }
 }
 
