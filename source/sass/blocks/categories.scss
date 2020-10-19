@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   background-size: 575px 375px;
 
+  @include retina-2x() {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+
   @include tablet-width() {
     @include container($tablet-width, 0, 0, 0);
 
@@ -17,6 +21,10 @@
     background-position: center 0px;
     background-repeat: no-repeat;
     background-size: 1150px 746px;
+
+    @include retina-2x() {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
 
     &::after {
       position: absolute;
@@ -47,6 +55,10 @@
 
       background-position: -50px 0;
       background-size: 1250px 36px;
+    }
+
+    @include retina-2x() {
+      background-image: url("../img/hero-desktop@2x.jpg");
     }
   }
 }
