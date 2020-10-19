@@ -2,7 +2,7 @@
   @include container($mobile-width, $mobile-padding, 27px, 20px);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding, 49px, 35px);
+    @include container($tablet-width, $tablet-padding, 49px, 28px);
   }
 }
 
@@ -27,23 +27,6 @@
   @include tablet-width() {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-
-.features__list-column-wrapper {
-  @include tablet-width() {
-    width: 50%;
-  }
-}
-
-.features__list-column {
-  @include list-style-none();
-
-  display: flex;
-  flex-direction: column;
-
-  @include tablet-width() {
-    width: 100%;
   }
 }
 
@@ -108,6 +91,32 @@
   @include tablet-width() {
     padding: 56px 35px 56px 0;
 
+    width: 50%;
+
     @include font-options($font-bold, 20px, 22px, $text-title-color);
+
+    &--flower {
+      order: 0;
+    }
+
+    &--money {
+      order: 2;
+    }
+
+    &--heart {
+      order: 4;
+    }
+
+    &--ball {
+      order: 1;
+    }
+
+    &--rocket {
+      order: 3;
+    }
+
+    &--gift {
+      order: 5;
+    }
   }
 }
