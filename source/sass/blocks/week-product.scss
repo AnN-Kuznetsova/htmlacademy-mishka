@@ -91,14 +91,8 @@
   order: -1;
   display: block;
 
-  @include tablet-width() {
-    @include font-options($font-bold, 43px, 50px, $text-title-color);
-  }
-
   @include desktop-width() {
     width: 875px;
-
-    @include font-options($font-bold, 53px, 57px, $text-title-color);
   }
 }
 
