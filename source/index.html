@@ -119,6 +119,7 @@
               <h2 class="week-product__title">Товар недели</h2>
               <strong class="week-product__intro">Вязаные корзинки</strong>
             </div>
+
             <div class="week-product__info-wrapper">
               <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести
                 расцветках, и трех размерах.</p>
@@ -139,10 +140,16 @@
               <b class="week-product__price-title">Цена: <span class="week-product__price">990</span> &#8381;</b>
               <a class="week-product__button  button  add-cart-js" href="add-cart.html">Заказать</a>
             </div>
-            <picture class="week-product__photo">
 
-              <img src="img/triple-set-mobile@1x.jpg" width="260" height="315"
-                alt="Фотография вязаных корзинок.">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.png 1x, img/triple-set-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img class="week-product__photo" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.png 2x"
+                width="260" height="315" alt="Фотография вязаных корзинок.">
             </picture>
           </div>
         </section>

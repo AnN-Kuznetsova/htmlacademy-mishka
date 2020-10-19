@@ -94,6 +94,10 @@
   @include font-options($font-bold, 17px, 24px, $text-title-color);
   font-weight: normal;
   text-transform: none;
+
+  @include tablet-width() {
+    @include font-options($font-bold, 20px, 24px, $text-title-color);
+  }
 }
 
 @mixin item-background() {
@@ -136,11 +140,19 @@
 
     background-color: transparent;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-position: 10px top;
-    background-size: auto 7px;
+    background-size: 319px 7px;
+    background-position: 0 top;
     background-repeat: repeat-x;
 
     transform: translateX(-50%) translateY(-7px);
+
+    @include tablet-width() {
+      height: 16px;
+
+      background-size: 771px 16px;
+
+      transform: translateX(-50%) translateY(-16px);
+    }
   }
 }
 
