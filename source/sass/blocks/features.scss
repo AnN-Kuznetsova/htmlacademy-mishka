@@ -4,6 +4,10 @@
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 49px, 28px);
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, 225px, 59px, 28px);
+  }
 }
 
 .features__title {
@@ -16,17 +20,30 @@
 
     margin-bottom: 47px;
   }
+
+  @include desktop-width() {
+    @include font-options($font-bold, 53px, 57px, $text-title-color);
+  }
 }
 
 .features__list {
   @include list-style-none();
 
+  position: relative;
+    left: 50%;
+
   display: flex;
   flex-direction: column;
+
+  width: 260px;
+
+  transform: translateX(-50%);
 
   @include tablet-width() {
     flex-direction: row;
     flex-wrap: wrap;
+
+    width: 670px;
   }
 }
 
