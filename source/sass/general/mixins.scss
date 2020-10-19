@@ -153,6 +153,16 @@
 
       transform: translateX(-50%) translateY(-16px);
     }
+
+    @include desktop-width() {
+      height: 23px;
+
+      background-size: 1050px 23px;
+      background-repeat: no-repeat;
+      background-position: center top;
+
+      transform: translateX(-50%) translateY(-23px) scale(1, -1);
+    }
   }
 }
 

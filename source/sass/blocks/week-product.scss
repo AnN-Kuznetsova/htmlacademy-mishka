@@ -16,6 +16,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 70px, 90px);
+  }
 }
 
 .week-product__title-wrapper {
@@ -32,6 +36,14 @@
     width: 100%;
     margin-bottom: 49px;
   }
+
+  @include desktop-width() {
+    z-index: 5;
+    margin-bottom: -110px;
+    padding-top: 53px;
+
+    justify-content: flex-start;
+  }
 }
 
 .week-product__title {
@@ -43,12 +55,33 @@
   text-transform: uppercase;
 
   @include tablet-width() {
-    width: 169px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 25%;
     margin: 10px 0 0;
-    padding: 0 25px 0 67px;
 
     @include font-options($font-bold, 17px, 17px, $bg-color-green-light);
     text-align: center;
+  }
+
+  @include desktop-width() {
+    order: -1;
+    width: 171px;
+    margin-top: 14px;
+  }
+}
+
+.week-produck__title-inner {
+  @include tablet-width() {
+    display: block;
+    width: 100px;
+    margin-left: 41px;
+  }
+
+  @include desktop-width() {
+    margin: 0;
+    margin-left: -7px;
   }
 }
 
@@ -61,6 +94,12 @@
   @include tablet-width() {
     @include font-options($font-bold, 43px, 50px, $text-title-color);
   }
+
+  @include desktop-width() {
+    width: 875px;
+
+    @include font-options($font-bold, 53px, 57px, $text-title-color);
+  }
 }
 
 .week-product__info-wrapper {
@@ -70,6 +109,10 @@
   @include tablet-width() {
     width: 50%;
     padding-right: 45px;
+  }
+
+  @include desktop-width() {
+    padding: 159px 58px 0 175px;
   }
 }
 
@@ -81,6 +124,10 @@
     margin-bottom: 39px;
 
     @include font-options($font-regular, 17px, 30px, $text-base-color);
+  }
+
+  @include desktop-width() {
+    margin-bottom: 50px;
   }
 }
 
@@ -110,6 +157,10 @@
 
   @include tablet-width() {
     min-height: 39px;
+  }
+
+  @include tablet-width() {
+    min-height: 40px;
   }
 }
 
@@ -159,6 +210,10 @@
 
     margin-bottom: 7px;
   }
+
+  @include desktop-width() {
+    margin-bottom: 6px;
+  }
 }
 
 .week-product__photo {
@@ -170,6 +225,8 @@
   height: 315px;
   margin: 0 0 17px;
 
+  background-color: $photo-bg-color-grey;
+
   transform: translateX(-50%);
 
   @include tablet-width() {
@@ -178,5 +235,11 @@
     width: 333px;
     height: 404px;
     margin: 8px 0 0;
+  }
+
+  @include desktop-width() {
+    width: 525px;
+    height: 636px;
+    margin: 0;
   }
 }
