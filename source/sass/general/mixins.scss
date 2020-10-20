@@ -153,17 +153,17 @@
     background-color: transparent;
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: 319px 7px;
-    background-position: 0 top;
     background-repeat: repeat-x;
+    background-position: center top;
 
-    transform: translateX(-50%) translateY(-7px);
+    transform: translateX(-50%) translateY(-7px) scale(1, -1);
 
     @include tablet-width() {
       height: 16px;
 
       background-size: 771px 16px;
 
-      transform: translateX(-50%) translateY(-16px);
+      transform: translateX(-50%) translateY(-16px) scale(1, -1);
     }
 
     @include desktop-width() {
@@ -171,7 +171,6 @@
 
       background-size: 1050px 23px;
       background-repeat: no-repeat;
-      background-position: center top;
 
       transform: translateX(-50%) translateY(-23px) scale(1, -1);
     }

@@ -2,29 +2,69 @@
   @include decorative-wavy-border-line();
 
   position: relative;
+
+  @include tablet-width() {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+    background-position: 0 0;
+
+    @include retina-2x() {
+      background-image:url("../img/review@2x.jpg");
+    }
+  }
 }
 
 .reviews__container {
-  @include container(320px, $mobile-padding, 8px, 51px);
+  @include container($mobile-width, $mobile-padding, 8px, 51px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 77px, 131px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .reviews__title {
   @include regular-title();
+
   margin-bottom: 26px;
+
+  @include tablet-width() {
+    order: 0;
+    width: calc(100% - 175px);
+    margin: 0;
+    padding-right: 175px;
+  }
 }
 
 .reviews__list {
-  padding-bottom: 39px;
+  padding-bottom: 38px;
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    order: 2;
+    margin: 45px 0 0;
+    padding: 0;
+  }
 }
 
 .reviews__item {
   display: none;
-  margin: 0;
+  margin: 0 0 34px;
   padding: 0;
-  margin-bottom: 34px;
 
   &--active {
     display: block;
+  }
+
+  @include tablet-width() {
+    margin-bottom: 0;
   }
 }
 
@@ -32,8 +72,14 @@
   @include font-options($font-regular, 15px, 30px, $text-base-color);
 
   margin: 0;
-  padding: 0;
   margin-bottom: 29px;
+  padding: 0;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+
+    margin-bottom: 59px;
+  }
 }
 
 .reviews__author-name {
@@ -42,6 +88,10 @@
   display: block;
 
   font-style: normal;
+
+  @include tablet-width() {
+    @include font-options($font-bold, 18px, 24px, $text-title-color);
+  }
 }
 
 .reviews__author-nickname {
@@ -49,11 +99,23 @@
 
   display: block;
   padding-top: 11px;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+    padding-top: 3px;
+  }
 }
 
 .reviews__toggles {
   display: flex;
   flex-direction: row;
+
+  @include tablet-width() {
+    margin-top: -54px;
+    margin-left: auto;
+
+    width: 175px;
+  }
 }
 
 .reviews__toggle {
@@ -99,5 +161,23 @@
 
   &:active::after {
     opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    border: none;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.reviews__button {
+  @include tablet-width() {
+    order: 1;
+    width: 175px;
+    margin-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
