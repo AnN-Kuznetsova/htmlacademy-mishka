@@ -132,7 +132,7 @@
     left: 50%;
 
     width: $box-width;
-    min-width: 320px;
+    min-width: $mobile-width;
     height: $box-height;
 
     border-#{$border-side}: $border-width solid $border-color;
@@ -148,7 +148,7 @@
     left: 50%;
 
     width: 100vw;
-    min-width: 320px;
+    min-width: $mobile-width;
     height: 7px;
 
     background-color: transparent;

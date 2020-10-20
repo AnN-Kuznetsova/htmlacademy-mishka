@@ -1,10 +1,22 @@
 .copyright {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablet-width() {
+    justify-content: flex-end;
+  }
+}
+
+.copyright__container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
-  padding: 19px 39px 10px 37px;
+  width: 260px;
+  padding: 18px 39px 9px 37px;
 
   outline: none;
   border-top: 1px solid $border-color-grey-2;
@@ -16,6 +28,13 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    width: 184px;
+    padding: 0;
+
+    border: none;
   }
 }
 

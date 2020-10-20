@@ -3,5 +3,41 @@
 }
 
 .page-footer__container {
-  @include container(320px, $mobile-padding, 8px, 19px);
+  @include container($mobile-width, $mobile-padding, 8px, 19px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 41px, 42px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer__logo {
+  @include mobile-width-only() {
+    display: none;
+  }
+
+  @include tablet-width() {
+    width: 30%;
+    margin-top: -8px;
+  }
+}
+
+.page-footer__social {
+  @include tablet-width() {
+    width: 40%;
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 10px;
+
+  @include tablet-width() {
+    width: 30%;
+    margin: 0;
+  }
 }
