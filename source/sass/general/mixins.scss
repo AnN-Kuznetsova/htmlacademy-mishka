@@ -79,7 +79,7 @@
 }
 
 @mixin regular-title {
-  margin: 0;
+  margin: 0 0 0 -2px;
   padding: 0;
 
   @include font-options($font-bold, 25px, 30px, $text-title-color);
@@ -88,6 +88,7 @@
 
   @include tablet-width() {
     @include font-options($font-bold, 43px, 50px, $text-title-color);
+    margin-left: -4px;
   }
 
   @include desktop-width() {
