@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  //min-width: $mobile-width;
+  min-width: $mobile-width;
   //width: $mobile-width;
-  width: $tablet-width;
+  //width: $tablet-width;
   //width: $desktop-width;
 
   @include font-options();

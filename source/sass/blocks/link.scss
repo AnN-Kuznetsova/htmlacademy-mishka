@@ -9,8 +9,14 @@
 
     width: 100%;
 
+    color: $text-base-color;
+
     border-bottom: 2px solid $link-border-color;
     transform: translateY(3px);
+  }
+
+  &:visited {
+    color: $text-base-color;
   }
 
   &:hover,

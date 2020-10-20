@@ -9,6 +9,27 @@
   }
 } */
 
+.contacts {
+  position: relative;
+
+  @include tablet-width() {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 47px;
+      right: 53px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-size: 47px 81px;
+      background-position: center center;
+    }
+  }
+}
+
 /* .contacts__info {
   order: -1;
 
@@ -33,6 +54,19 @@
   }
 } */
 
+.contacts__button-wrapper {
+  @include container($mobile-width, $mobile-padding, 38px, 40px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 55px, 57px);
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .contacts__button {
-  @include container(320px, $mobile-padding, 38px, 40px);
+  @include tablet-width() {
+    width: 230px;
+  }
 }
