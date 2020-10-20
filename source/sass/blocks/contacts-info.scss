@@ -4,6 +4,11 @@
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 62px, 25px);
   }
+
+  @include desktop-width() {
+    @include container(50%, 0, 69px, 90px);
+    padding-left: 175px;
+  }
 }
 
 .contacts-info__title {
@@ -37,6 +42,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @include desktop-width() {
+    display: block;
+  }
 }
 
 .contacts-info__content-property {
@@ -45,6 +54,10 @@
 
   @include tablet-width() {
     width: 50%;
+  }
+
+  @include desktop-width() {
+    width: 100%;
   }
 }
 
