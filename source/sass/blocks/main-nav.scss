@@ -304,6 +304,22 @@
       0 4px 0 0 $bg-color-base,
       0 6px 0 0 $link-text-color-hover;
   }
+
+  @include tablet-width() {
+    &--active {
+      box-shadow:
+        0 4px 0 0 $bg-color-grey,
+        0 6px 0 0 $link-text-color-hover;
+    }
+  }
+
+  @include desktop-width() {
+    &--active {
+      box-shadow:
+        0 4px 0 0 $bg-color-base,
+        0 6px 0 0 $link-text-color-hover;
+    }
+  }
 }
 
 .main-nav__item--search .main-nav__link-text {

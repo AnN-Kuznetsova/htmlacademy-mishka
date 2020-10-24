@@ -1,5 +1,9 @@
 .page-inner__container {
   @include container(320px, 0, 0, 0);
+
+  @include tablet-width() {
+    margin-top: -61px;
+  }
 }
 
 .page-inner__title {

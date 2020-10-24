@@ -1,0 +1,5 @@
+.page-main {
+  @include tablet-width() {
+    margin-top: -61px;
+  }
+}

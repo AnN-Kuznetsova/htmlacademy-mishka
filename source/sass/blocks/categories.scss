@@ -15,7 +15,6 @@
     @include container($tablet-width, 0, 0, 0);
 
     position: relative;
-    margin-top: -61px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center 0px;
@@ -44,8 +43,6 @@
 
   @include desktop-width() {
     @include container(100%, 0, 0, 0);
-
-    margin-top: -61px;
 
     background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 1150px 746px;
