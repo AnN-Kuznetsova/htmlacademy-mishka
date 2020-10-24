@@ -1,8 +1,20 @@
 .footer-logo {
   height: 34px;
+
+  &:hover .footer-logo__image,
+  &:focus .footer-logo__image {
+    fill: $social-color-hover;
+  }
+
+  &:active .footer-logo__image {
+    fill: rgba($social-color-hover, 0.3);
+  }
 }
 
 .footer-logo__image {
   width: 102px;
   height: 34px;
+
+  pointer-events: none;
+  fill: $social-color-base;
 }
