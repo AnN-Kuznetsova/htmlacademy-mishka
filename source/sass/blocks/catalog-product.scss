@@ -1,7 +1,17 @@
 .catalog-product {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+
   @include tablet-width() {
     display: flex;
     flex-direction: row;
+    width: auto;
+  }
+
+  @include desktop-width() {
+    flex-direction: column;
+    width: 316px;
   }
 }
 
@@ -16,6 +26,11 @@
     flex-shrink: 0;
     width: 334px;
     height: 334px;
+  }
+
+  @include desktop-width() {
+    width: 316px;
+    height: 462px;
   }
 }
 
@@ -39,6 +54,11 @@
 
     display: flex;
     flex-direction: column;
+  }
+
+  @include desktop-width() {
+    @include container(auto, 26px, 25px, 19px);
+    margin: 0;
   }
 }
 
@@ -67,6 +87,10 @@
   @include tablet-width() {
     @include font-options($font-regular, 15px, 30px, $text-base-color);
   }
+
+  @include desktop-width() {
+    padding-bottom: 14px;
+  }
 }
 
 .catalog-product__price-wrapper {
@@ -81,6 +105,10 @@
   @include tablet-width() {
     margin-top: auto;
     padding: 13px 5px 0 4px;
+  }
+
+  @include desktop-width() {
+    padding: 13px 6px 0 0;
   }
 }
 

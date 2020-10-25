@@ -7,12 +7,23 @@
   @include container($mobile-width, $mobile-padding, 30px, 30px);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding, 68px, 30px);
+    @include container($tablet-width, $tablet-padding, 68px, 53px);
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 111px, 57px);
   }
 }
 
 .catalog__list {
   @include list-style-none();
+
+  @include desktop-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .catalog__item {
@@ -21,6 +32,10 @@
 
   @include tablet-width() {
     margin-bottom: 54px;
+  }
+
+  @include desktop-width() {
+    margin: 0;
   }
 
   &:last-child {
