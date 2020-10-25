@@ -1,16 +1,28 @@
 .making__container {
-  @include container(320px, $mobile-padding, 0, 58px);
+  @include container($mobile-width, $mobile-padding, 0, 58px);
 
   position: relative;
   top: -150px;
   overflow: hidden;
 
   margin-bottom: -150px;
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 0, 63px);
+
+    top: 0;
+
+    margin-bottom: 0;
+  }
 }
 
 .making__player {
   position: relative;
   top: 246px;
+
+  @include tablet-width() {
+    top: auto;
+  }
 }
 
 .making__wrapper {
@@ -18,6 +30,10 @@
 
   border: 1px solid $border-color-grey;
   @include item-background();
+
+  @include tablet-width() {
+    @include container(668px, 39px, 37px, 45px);
+  }
 }
 
 .making__title {
@@ -31,7 +47,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 11px;
+    top: 50%;
     left: 0;
     z-index: 2;
     width: 32px;
@@ -40,14 +56,26 @@
     background-image: url("../img/icon-video.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    transform: translateY(-50%);
+  }
+
+  @include tablet-width() {
+    margin-bottom: 34px;
+    padding-left: 65px;
   }
 }
 
 .making__description {
-  @include font-options($font-regular, 13px, 24px, $text-base-color);
-
   margin: 0;
   margin-bottom: 25px;
+
+  @include font-options($font-regular, 13px, 24px, $text-base-color);
+
+  @include tablet-width() {
+    margin-bottom: 35px;
+
+    @include font-options($font-regular, 15px, 30px, $text-base-color);
+  }
 }
 
 .making__button {

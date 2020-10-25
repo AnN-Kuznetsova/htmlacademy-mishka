@@ -195,7 +195,17 @@
           <div class="making__container">
             <div class="making__player  player">
               <div class="player__wrapper">
-                <video class="player__video" src="#" poster="img/video-mobile@1x.jpg" width="260" height="150" aria-label="Кино о создании милых штук."></video>
+                <!-- <video class="player__video" src="#" poster="img/video-mobile@1x.jpg" width="260" height="150" aria-label="Кино о создании милых штук."></video> -->
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                  <img class="player__video-poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+                    width="260" height="150" alt="Кино о создании милых штук.">
+                </picture>
                 <button class="player__button  player__button--play">
                   <span class="visually-hidden">Play</span>
                 </button>
