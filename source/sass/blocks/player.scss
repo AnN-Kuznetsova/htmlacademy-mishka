@@ -15,6 +15,11 @@
     width: 668px;
     height: 455px;
   }
+
+  @include desktop-width() {
+    width: 682px;
+    height: 455px;
+  }
 }
 
 .player__button {

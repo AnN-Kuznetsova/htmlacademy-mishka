@@ -14,6 +14,13 @@
 
     margin-bottom: 0;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 0, 105px);
+
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .making__player {
@@ -22,6 +29,10 @@
 
   @include tablet-width() {
     top: auto;
+  }
+
+  @include desktop-width() {
+    flex-shrink: 0;
   }
 }
 
@@ -33,6 +44,15 @@
 
   @include tablet-width() {
     @include container(668px, 39px, 37px, 45px);
+  }
+
+  @include desktop-width() {
+    @include container(auto, 78px, 94px, 45px);
+    padding-right: 57px;
+
+    flex-grow: 1;
+
+    border-left: none;
   }
 }
 
@@ -63,6 +83,15 @@
     margin-bottom: 34px;
     padding-left: 65px;
   }
+
+  @include desktop-width() {
+    margin-bottom: 34px;
+    padding-left: 0;
+
+    &::before {
+      top: -37px;
+    }
+  }
 }
 
 .making__description {
@@ -75,6 +104,10 @@
     margin-bottom: 35px;
 
     @include font-options($font-regular, 15px, 30px, $text-base-color);
+  }
+
+  @include desktop-width() {
+    margin-bottom: 47px;
   }
 }
 
