@@ -4,7 +4,11 @@
 }
 
 .catalog__container {
-  @include container(320px, $mobile-padding, 30px, 30px);
+  @include container($mobile-width, $mobile-padding, 30px, 30px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 68px, 30px);
+  }
 }
 
 .catalog__list {
@@ -14,6 +18,10 @@
 .catalog__item {
   margin: 0;
   margin-bottom: 31px;
+
+  @include tablet-width() {
+    margin-bottom: 54px;
+  }
 
   &:last-child {
     margin-bottom: 0;
