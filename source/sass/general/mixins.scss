@@ -59,7 +59,7 @@
   position: relative;
 
   margin: 0;
-  padding: 71px 30px 76px;
+  padding: 71px $mobile-padding 76px;
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;
@@ -71,10 +71,21 @@
 
   @include tablet-width() {
     @include font-options($font-bold, 43px, 50px, $text-title-color);
+
+    padding: 95px $tablet-padding 91px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: 768px 23px;
+    background-position: center bottom;
   }
 
   @include desktop-width() {
     @include font-options($font-bold, 53px, 57px, $text-title-color);
+
+    padding: 93px $desktop-padding 121px;
+
+    background-size: 1150px 35px;
   }
 }
 
