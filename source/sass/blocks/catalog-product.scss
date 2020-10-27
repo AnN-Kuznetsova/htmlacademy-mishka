@@ -12,6 +12,7 @@
   @include desktop-width() {
     flex-direction: column;
     width: 316px;
+    margin: 0;
   }
 }
 

@@ -1,14 +1,17 @@
 .page-inner__container {
-  @include container($mobile-width, 0, 0, 0);
+  background-color: $bg-color-grey;
 
   @include tablet-width() {
-    @include container($tablet-width, 0, 0, 0);
     margin-top: -61px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: 768px 23px;
+    background-position: center bottom;
   }
 
   @include desktop-width() {
-    @include container($desktop-width, 0, 0, 0);
-    margin-top: -61px;
+    background-size: 1150px 35px;
   }
 }
 

@@ -14,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 41px, 42px);
+  }
 }
 
 .page-footer__logo {
