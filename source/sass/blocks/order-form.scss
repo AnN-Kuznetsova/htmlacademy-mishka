@@ -1,22 +1,66 @@
 .order-form__container {
-  @include container(320px, $mobile-padding, 0, 55px);
+  @include container($mobile-width, $mobile-padding, 0, 55px);
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include container($tablet-width, 0, 0, 51px);
+  }
 }
 
 .order-form__product {
   margin: 0 0 31px 0;
+
+  @include tablet-width() {
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
 .order-form__client {
   margin: 0 0 29px 0;
+
+  @include tablet-width() {
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
 .order-form__additionally {
-  margin: 0 0 9px 0;
+  margin: 0 0 16px 0;
+
+  @include tablet-width() {
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
 .order-form__required {
-  @include font-options($font-regular, 14px, 16px, $text-base-color);
-
   display: block;
   margin: 0 0 32px 0;
+
+  @include font-options($font-regular, 14px, 16px, $text-base-color);
+
+  @include tablet-width() {
+    order: 100;
+    width: 50%;
+    margin: 0;
+    padding: 0 $tablet-padding 0 0;
+
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+    text-align: right;
+  }
+}
+
+.order-form__button {
+  @include tablet-width() {
+    order: 99;
+    width: 230px;
+    height: 52px;
+    margin: 3px $tablet-padding 0;
+  }
 }

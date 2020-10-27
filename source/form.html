@@ -102,11 +102,11 @@
             <!-- Данные об изделии -->
             <fieldset class="order-form__product  product-data">
               <legend class="visually-hidden">Данные об изделии</legend>
-              <ul class="product-data__list">
+              <ul class="product-data__list" role="none">
                 <li class="product-data__item">
-                  <fieldset class="form-fieldset">
+                  <fieldset class="form-fieldset  form-fieldset--product-type">
                     <legend class="form-fieldset__legend  form-fieldset__legend--choice">Тип</legend>
-                    <ul class="form-fieldset__list">
+                    <ul class="form-fieldset__list  form-fieldset__list--product-type" role="none">
                       <li class="form-fieldset__item  form-fieldset__item--radio">
                         <input class="visually-hidden form-fieldset__choice-input" id="interior-select" type="radio" name="type-select" value="interior" checked>
                         <label class="form-fieldset__choice-label  form-fieldset__choice-label--radio" for="interior-select">Аксессуар для интерьера</label>
@@ -119,9 +119,9 @@
                   </fieldset>
                 </li>
                 <li class="product-data__item">
-                  <fieldset class="form-fieldset">
+                  <fieldset class="form-fieldset  form-fieldset--product-color">
                     <legend class="form-fieldset__legend  form-fieldset__legend--choice">Цвет</legend>
-                    <ul class="form-fieldset__list">
+                    <ul class="form-fieldset__list  form-fieldset__list--product-color" role="none">
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden form-fieldset__choice-input" id="white-select" type="checkbox" name="white-select" checked>
                         <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="white-select">Белый</label>
@@ -155,38 +155,47 @@
             <!-- Данные о заказчике -->
             <fieldset class="order-form__client  client-data">
               <legend class="visually-hidden">Данные о заказчике</legend>
-              <ul class="client-data__list">
+              <ul class="client-data__list" role="none">
                 <li class="client-data__item">
-                  <fieldset class="form-fieldset">
+                  <fieldset class="form-fieldset  form-fieldset--client-name">
                     <legend class="form-fieldset__legend">ФИО</legend>
-                    <label class="form-fieldset__label  form-fieldset__label--client">Имя:
-                      <input class="form-fieldset__input" type="text" name="client-name" value="" placeholder="Введите ваше имя*" required>
-                    </label>
-                    <label class="form-fieldset__label  form-fieldset__label--client">Фамилия:
-                      <input class="form-fieldset__input" type="text" name="client-surname" value="" placeholder="Укажите фамилию*" required>
-                    </label>
-                    <label class="form-fieldset__label  form-fieldset__label--client">Отчество:
-                      <input class="form-fieldset__input" type="text" name="client-patronymic" value="" placeholder="Отчество, если желаете">
-                    </label>
+                    <div class="client-name">
+                      <label class="form-fieldset__label  form-fieldset__label--client">Имя:
+                        <input class="form-fieldset__input" type="text" name="client-name" value="" placeholder="Введите ваше имя*" required>
+                      </label>
+                      <label class="form-fieldset__label  form-fieldset__label--client">Фамилия:
+                        <input class="form-fieldset__input" type="text" name="client-surname" value="" placeholder="Укажите фамилию*" required>
+                      </label>
+                      <label class="form-fieldset__label  form-fieldset__label--client">Отчество:
+                        <input class="form-fieldset__input" type="text" name="client-patronymic" value="" placeholder="Отчество, если желаете">
+                      </label>
+                    </div>
                   </fieldset>
                 </li>
-                <li class="client-data__item  form-fieldset">
-                  <label class="form-fieldset__legend  form-fieldset__legend--tel" for="client-tel">Тел</label>
-                  <div class="form-fieldset__input-wrapper">
-                    <input class="form-fieldset__input  form-fieldset__input--tel" id="client-tel" type="tel" name="client-tel" value="" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
-                    <svg class="form-fieldset__input-icon  form-fieldset__input-icon--tel" width="25" height="24" aria-hidden="true" focusable="false">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </li>
-                <li class="client-data__item  form-fieldset">
-                  <label class="form-fieldset__legend  form-fieldset__legend--email" for="client-email">e&#8209;mail</label>
-                  <div class="form-fieldset__input-wrapper">
-                    <input class="form-fieldset__input  form-fieldset__input--email" id="client-email" type="email" name="client-email" value="" placeholder="Ваш Email*" required>
-                    <svg class="form-fieldset__input-icon  form-fieldset__input-icon--email" width="32" height="21" aria-hidden="true" focusable="false">
-                      <use xlink:href="#icon-mail"></use>
-                    </svg>
-                  </div>
+                <li class="client-data__item">
+                  <fieldset class="form-fieldset  form-fieldset--communication">
+                    <legend class="visually-hidden">Связь</legend>
+                    <ul class="form-fieldset__list  form-fieldset__list--communication" role="none">
+                      <li class="form-fieldset__item  form-fieldset__item--communication">
+                        <label class="form-fieldset__legend  form-fieldset__legend--tel" for="client-tel">Тел</label>
+                        <div class="form-fieldset__input-wrapper">
+                          <input class="form-fieldset__input  form-fieldset__input--tel" id="client-tel" type="tel" name="client-tel" value="" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+                          <svg class="form-fieldset__input-icon  form-fieldset__input-icon--tel" width="25" height="24" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-phone"></use>
+                          </svg>
+                        </div>
+                      </li>
+                      <li class="form-fieldset__item  form-fieldset__item--communication">
+                        <label class="form-fieldset__legend  form-fieldset__legend--email" for="client-email">e&#8209;mail</label>
+                        <div class="form-fieldset__input-wrapper">
+                          <input class="form-fieldset__input  form-fieldset__input--email" id="client-email" type="email" name="client-email" value="" placeholder="Ваш Email*" required>
+                          <svg class="form-fieldset__input-icon  form-fieldset__input-icon--email" width="32" height="21" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
                 </li>
               </ul>
             </fieldset>

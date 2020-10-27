@@ -1,10 +1,17 @@
 .work-order__container {
-  @include container(320px, $mobile-padding, 0, 0);
+  @include container($mobile-width, $mobile-padding, 22px, 23px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 62px, 7px);
+  }
 }
 
 .work-order__description {
   @include font-options($font-regular, 13px, 24px, $text-base-color);
 
   margin: 0;
-  padding: 22px 0 23px 0;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+  }
 }

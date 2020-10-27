@@ -209,7 +209,7 @@
     width: $choice-size;
     height: $choice-size;
 
-    background-color: $bg-color-base;
+    background-color: transparent;
     border: 2px solid $input-border-base-color;
   }
 
@@ -225,9 +225,9 @@
     border-color: $border-color-grey-4;
   }
 
-  /* @include tablet-width() {
-    padding-left: $choice-size +  20px;
-  } */
+  @include tablet-width() {
+    padding-left: $choice-size +  28px;
+  }
 }
 
 //  фокус
@@ -280,5 +280,9 @@
     background-position: center center;
 
     transform: translateY(-50%);
+
+    @include tablet-width() {
+      background-size: 33px 22px;
+    }
   }
 }

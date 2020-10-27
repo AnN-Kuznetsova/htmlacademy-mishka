@@ -1,16 +1,16 @@
 //  ширина/высота кастомных радио/чекбоксовы
 $form-choice-size: 39px;
-//$form-choice-size-tablet: 40px;
+$form-choice-size-tablet: 52px;
 
 //  высота инпутов
 $input-height: 52px;
 //$input-height-tablet: 52px;
 
-/* @mixin flex-row() {
+@mixin flex-row() {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-} */
+}
 
 .form-fieldset {
   padding: 0;
@@ -19,18 +19,19 @@ $input-height: 52px;
   border: none;
   overflow: hidden;
 
-  /* &--program-select {
-    margin-left: -$mobile-padding;
-    margin-right: -$mobile-padding;
-    padding: $mobile-padding;
-
-    border: 1px solid $border-color-third;
-
+  &--product-color,
+  &--communication {
     @include tablet-width() {
-      margin: 0;
-      padding: 23px 27px;
+      background-color: $bg-color-grey;
     }
-  } */
+  }
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 50px, 50px);
+
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .form-fieldset__legend {
@@ -66,28 +67,43 @@ $input-height: 52px;
     background-color: $input-border-green-color;
   }
 
-  /* @include tablet-width() {
-    width: fit-content;
-    margin-bottom: 76px;
-  } */
+  @include tablet-width() {
+    float: left;
+    flex-shrink: 0;
+    width: 25%;
+    padding: 16px 50px 0 0;
+
+    background-color: transparent;
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .form-fieldset__list {
   @include list-style-none();
 
-  /* @include tablet-width() {
-    &--additionally {
-      @include flex-row();
+  @include tablet-width() {
+    width: 75%;
+    margin-left: auto;
+  }
 
-      margin-top: -20px;
+  &--product-color {
+    @include tablet-width() {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
-  @include desktop-width() {
-    &--cat-owner {
-      @include flex-row();
+  &--communication {
+    @include tablet-width() {
+      flex-grow: 1;
+      margin-left: 0;
     }
-  } */
+  }
 }
 
 .form-fieldset__item {
@@ -114,33 +130,49 @@ $input-height: 52px;
     margin-bottom: 22px;
   }
 
-  /* @include tablet-width() {
-    margin-bottom: 20px;
+  &--communication {
+    display: flex;
+    flex-direction: column;
 
-    &--choice {
-      min-height: $form-choice-size-tablet;
-      margin-bottom: 13px;
+    &:not(:last-child) {
+      margin-bottom: 32px;
     }
-  } */
+  }
+
+  @include tablet-width() {
+    margin-bottom: 24px;
+
+    &--radio {
+      min-height: $form-choice-size-tablet;
+      margin-bottom: 24px;
+    }
+
+    &--checkbox {
+      min-height: $form-choice-size-tablet;
+      margin-bottom: 24px;
+    }
+
+    &--communication {
+      flex-direction: row;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
 }
 
-/* .form-fieldset__list--cat-owner .form-fieldset__item {
-  @include desktop-width() {
-    width: 570px;
-    margin-bottom: 20px;
-  }
-} */
-
-/* .form-fieldset__list--additionally .form-fieldset__item {
+.form-fieldset__list--product-color .form-fieldset__item {
   @include tablet-width() {
-    width: 45.3%;
-    margin-bottom: 32px;
-  }
+    width: 47.6%;
 
-  @include desktop-width() {
-    width: 245px;
+    &:nth-last-child(-n+2):not(:nth-child(even)),
+    &:nth-last-child(-n+2):not(:nth-child(even)) + .form-fieldset__item {
+      margin-bottom: 0;
+    }
   }
-} */
+}
 
 .form-fieldset__label {
   @include font-options($font-bold, 17px, 18px, $text-title-color);
@@ -151,34 +183,24 @@ $input-height: 52px;
   padding: 0;
 
   &--client {
-    margin-bottom: 22px;
-
-    &:last-child {
-      margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: 22px;
     }
   }
 
-/*   &--choice {
-    @include custom-choice($form-choice-size);
-
+  @include tablet-width() {
     display: flex;
     align-items: center;
 
-    padding-left: 62px;
-  } */
+    @include font-options($font-bold, 19px, 18px, $text-title-color);
 
-  /* flex-shrink: 0;
-  display: flex;
-  align-items: center;
-
-  max-width: 50%;
-  margin: auto 15px auto 0; */
+    &--client {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
-
-/* .form-fieldset__label-required {
-  top: 0.01em;
-  font-size: 1.05em;
-} */
 
 .form-fieldset__input-wrapper {
   position: relative;
@@ -218,18 +240,21 @@ $input-height: 52px;
     border-color: $input-border-green-color;
   }
 
-  /* @include tablet-width() {
-    height: $input-height-tablet;
-    padding: 13px 20px;
+  @include tablet-width() {
+    margin-left: 26px;
 
-    font-size: 20px;
-    line-height: 20px;
+    @include font-options($font-regular, 19px, 18px, $text-base-color);
+
+    &::placeholder {
+      padding-left: 16px;
+      @include font-options($font-regular, 19px, 18px, rgba($text-base-color, 0.3));
+    }
 
     &--email,
     &--tel {
-      padding-right: $input-height-tablet;
+      margin-left: 0;
     }
-  } */
+  }
 }
 
 .form-fieldset__input-icon {
@@ -245,6 +270,10 @@ $input-height: 52px;
     height: 24px;
 
     transform: translateX(-33px) translateY(calc(-50% - 3px));
+
+    @include tablet-width {
+      transform: translateX(-52px) translateY(calc(-50% - 3px));
+    }
   }
 
   &--email {
@@ -252,11 +281,11 @@ $input-height: 52px;
     height: 21px;
 
     transform: translateX(-37px) translateY(calc(-50% + 1px));
-  }
 
-  /* @include desktop-width {
-    transform: translateX(-38px) translateY(-50%);
-  } */
+    @include tablet-width {
+      transform: translateX(-55px) translateY(calc(-50% - 1px));
+    }
+  }
 }
 
 .form-fieldset__input:hover + .form-fieldset__input-icon,
@@ -265,11 +294,8 @@ $input-height: 52px;
   fill: $input-border-green-color;
 }
 
-/* .form-fieldset__input:invalid + .form-fieldset__input-icon {
-  fill: $border-color-input-error;
-} */
-
 .form-fieldset__textarea {
+  display: block;
   width: 100%;
   min-height: 141px;
   margin: 0;
@@ -295,14 +321,12 @@ $input-height: 52px;
   &:active {
     border-color: $input-border-green-color;
   }
+}
 
-  /* @include tablet-width() {
-    min-height: 174px;
-    padding: 10px 17px;
-
-    font-size: 20px;
-    line-height: 30px;
-  } */
+.client-name {
+  @include tablet-width() {
+    flex-grow: 1;
+  }
 }
 
 
@@ -317,12 +341,14 @@ $input-height: 52px;
   padding-top: 9px;
 
   @include font-options($font-bold, 17px, 18px, $text-title-color);
-
   @include custom-choice($form-choice-size);
 
-  /* @include tablet-width() {
+  @include tablet-width() {
+    @include font-options($font-bold, 19px, 18px, $text-title-color);
     @include custom-choice($form-choice-size-tablet);
-  } */
+
+    padding-top: 15px;
+  }
 }
 
 //  hover
@@ -344,7 +370,7 @@ $input-height: 52px;
 .form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
   @include custom-choice--checked($form-choice-size);
 
-  /* @include tablet-width() {
+  @include tablet-width() {
     @include custom-choice--checked($form-choice-size-tablet);
-  } */
+  }
 }

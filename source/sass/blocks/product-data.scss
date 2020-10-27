@@ -2,8 +2,6 @@
   padding: 0;
 
   border: none;
-
-  //background-color: lightgreen;
 }
 
 .product-data__list {
@@ -13,9 +11,11 @@
 .product-data__item {
   margin-bottom: 31px;
 
-  //outline: 1px solid red;
-
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include tablet-width() {
+    margin: 0;
   }
 }
