@@ -10,6 +10,10 @@
 
     @include container($tablet-width, 0, 0, 51px);
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, 0, 0, 50px);
+  }
 }
 
 .order-form__product {
@@ -54,6 +58,11 @@
     @include font-options($font-regular, 17px, 30px, $text-base-color);
     text-align: right;
   }
+
+  @include desktop-width() {
+    margin-top: -5px;
+    padding-right: 225px;
+  }
 }
 
 .order-form__button {
@@ -62,5 +71,9 @@
     width: 230px;
     height: 52px;
     margin: 3px $tablet-padding 0;
+  }
+
+  @include desktop-width() {
+    margin: -1px $desktop-padding 0 225px;
   }
 }

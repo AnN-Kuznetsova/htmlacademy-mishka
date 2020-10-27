@@ -4,6 +4,10 @@
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 62px, 7px);
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, 225px, 104px, 7px);
+  }
 }
 
 .work-order__description {

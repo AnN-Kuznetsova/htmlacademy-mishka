@@ -4,7 +4,6 @@ $form-choice-size-tablet: 52px;
 
 //  высота инпутов
 $input-height: 52px;
-//$input-height-tablet: 52px;
 
 @mixin flex-row() {
   display: flex;
@@ -19,6 +18,17 @@ $input-height: 52px;
   border: none;
   overflow: hidden;
 
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 50px, 50px);
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 50px, 50px);
+  }
+
   &--product-color,
   &--communication {
     @include tablet-width() {
@@ -26,11 +36,12 @@ $input-height: 52px;
     }
   }
 
-  @include tablet-width() {
-    @include container($tablet-width, $tablet-padding, 50px, 50px);
-
-    display: flex;
-    flex-direction: row;
+  &--client-name,
+  &--communication,
+  &--additionally {
+    @include desktop-width() {
+      padding-right: 225px;
+    }
   }
 }
 
@@ -79,6 +90,11 @@ $input-height: 52px;
       content: none;
     }
   }
+
+  @include desktop-width() {
+    width: 175px;
+    padding: 16px 30px 0 62px;
+  }
 }
 
 .form-fieldset__list {
@@ -89,12 +105,20 @@ $input-height: 52px;
     margin-left: auto;
   }
 
+  @include desktop-width() {
+    width: 83.3%;
+  }
+
   &--product-color {
     @include tablet-width() {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    @include desktop-width() {
+      justify-content: flex-start;
     }
   }
 
@@ -166,9 +190,31 @@ $input-height: 52px;
 .form-fieldset__list--product-color .form-fieldset__item {
   @include tablet-width() {
     width: 47.6%;
+  }
 
-    &:nth-last-child(-n+2):not(:nth-child(even)),
-    &:nth-last-child(-n+2):not(:nth-child(even)) + .form-fieldset__item {
+  @include desktop-width() {
+    width: 30.1%;
+    margin-left: 0;
+    padding-right: 40px;
+  }
+
+  &:nth-last-child(-n+2):nth-child(2n + 1),
+  &:nth-last-child(-n+2):nth-child(2n + 1) ~ .form-fieldset__item {
+    @include tablet-width() {
+      margin-bottom: 0;
+    }
+
+    @include desktop-width() {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &:nth-last-child(-n+3):nth-child(3n + 1),
+  &:nth-last-child(-n+3):nth-child(3n + 1) ~ .form-fieldset__item,
+  &:nth-last-child(-n+3):nth-child(3n + 1):nth-last-child(-n+2):nth-child(2n + 1) {
+    @include desktop-width() {
       margin-bottom: 0;
     }
   }
@@ -182,19 +228,19 @@ $input-height: 52px;
   margin: 0;
   padding: 0;
 
-  &--client {
-    &:not(:last-child) {
-      margin-bottom: 22px;
-    }
-  }
-
   @include tablet-width() {
     display: flex;
     align-items: center;
 
     @include font-options($font-bold, 19px, 18px, $text-title-color);
+  }
 
-    &--client {
+  &--client {
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+
+    @include tablet-width() {
       &:not(:last-child) {
         margin-bottom: 24px;
       }
@@ -274,6 +320,10 @@ $input-height: 52px;
     @include tablet-width {
       transform: translateX(-52px) translateY(calc(-50% - 3px));
     }
+
+    @include desktop-width {
+      transform: translateX(-33px) translateY(calc(-50% - 3px));
+    }
   }
 
   &--email {
@@ -284,6 +334,10 @@ $input-height: 52px;
 
     @include tablet-width {
       transform: translateX(-55px) translateY(calc(-50% - 1px));
+    }
+
+    @include desktop-width {
+      transform: translateX(-35px) translateY(calc(-50% - 1px));
     }
   }
 }
@@ -333,10 +387,7 @@ $input-height: 52px;
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
 
 .form-fieldset__choice-label {
-  display: block; //flex;
-  //align-items: center;
-
-  //margin: auto 0;
+  display: block;
   margin: 0;
   padding-top: 9px;
 
