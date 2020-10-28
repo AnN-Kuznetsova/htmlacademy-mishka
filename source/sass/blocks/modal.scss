@@ -8,7 +8,9 @@
 
   &--add-cart {
     top: 150px;
-    left: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
   }
 }
 
@@ -21,6 +23,10 @@
 
   border-top: 1px solid $border-color-grey-4;
   box-shadow: 0 5px 10px 0 rgba($shadow-base-color, 0.25);
+
+  @include tablet-width() {
+    @include container(566px, 106px, 34px, 46px);
+  }
 }
 
 .modal__title {
@@ -30,6 +36,12 @@
   @include font-options($font-bold, 25px, 30px, $text-title-color);
   text-transform: uppercase;
   text-align: center;
+
+  @include tablet-width() {
+    @include font-options($font-bold, 30px, 57px, $text-title-color);
+
+    margin-bottom: 13px;
+  }
 }
 
 .modal__description {
@@ -38,4 +50,16 @@
 
   @include font-options($font-regular, 15px, 30px, $text-base-color);
   text-align: center;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+  }
+}
+
+.modal__button {
+  margin-top: 32px;
+
+  @include tablet-width() {
+    margin-top: 30px;
+  }
 }
