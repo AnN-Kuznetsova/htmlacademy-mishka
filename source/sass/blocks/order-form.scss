@@ -2,12 +2,6 @@
   @include container($mobile-width, $mobile-padding, 0, 55px);
 
   @include tablet-width() {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
     @include container($tablet-width, 0, 0, 51px);
   }
 
@@ -43,6 +37,21 @@
   }
 }
 
+.order-form__button-wrapper {
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 0, 0);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, 225px, 0, 0);
+  }
+}
+
 .order-form__required {
   display: block;
   margin: 0 0 32px 0;
@@ -50,10 +59,8 @@
   @include font-options($font-regular, 14px, 16px, $text-base-color);
 
   @include tablet-width() {
-    order: 100;
     width: 50%;
     margin: 0;
-    padding: 0 $tablet-padding 0 0;
 
     @include font-options($font-regular, 17px, 30px, $text-base-color);
     text-align: right;
@@ -61,19 +68,18 @@
 
   @include desktop-width() {
     margin-top: -5px;
-    padding-right: 225px;
   }
 }
 
 .order-form__button {
   @include tablet-width() {
-    order: 99;
+    order: -1;
     width: 230px;
     height: 52px;
-    margin: 3px $tablet-padding 0;
+    margin-top: 3px;
   }
 
   @include desktop-width() {
-    margin: -1px $desktop-padding 0 225px;
+    margin-top: -1px;
   }
 }
