@@ -12,7 +12,7 @@
   }
 
   @include desktop-width() {
-    @include container($desktop-width, 0, 0, 50px);
+    @include container(100%, 0, 0, 50px);
   }
 }
 

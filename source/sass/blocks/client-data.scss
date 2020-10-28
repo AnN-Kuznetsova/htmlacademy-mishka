@@ -18,4 +18,10 @@
   @include tablet-width() {
     margin: 0;
   }
+
+  &--communication {
+    @include tablet-width() {
+      background-color: $bg-color-grey;
+    }
+  }
 }

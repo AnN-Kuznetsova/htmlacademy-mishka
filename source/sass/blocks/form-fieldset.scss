@@ -29,13 +29,6 @@ $input-height: 52px;
     @include container($desktop-width, $desktop-padding, 50px, 50px);
   }
 
-  &--product-color,
-  &--communication {
-    @include tablet-width() {
-      background-color: $bg-color-grey;
-    }
-  }
-
   &--client-name,
   &--communication,
   &--additionally {
