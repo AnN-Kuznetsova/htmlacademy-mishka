@@ -288,11 +288,11 @@ $input-height: 52px;
 
   @include tablet-width() {
     margin-left: 26px;
+    padding-left: 16px;
 
     @include font-options($font-regular, 19px, 18px, $text-base-color);
 
     &::placeholder {
-      padding-left: 16px;
       @include font-options($font-regular, 19px, 18px, rgba($text-base-color, 0.3));
     }
 
@@ -378,6 +378,14 @@ $input-height: 52px;
   &:focus,
   &:active {
     border-color: $input-border-green-color;
+  }
+
+  @include tablet-width() {
+    @include font-options($font-regular, 19px, 18px, $text-base-color);
+
+    &::placeholder {
+      @include font-options($font-regular, 19px, 18px, rgba($text-base-color, 0.3));
+    }
   }
 }
 
