@@ -270,12 +270,19 @@ $input-height: 52px;
     padding-right: $input-height;
   }
 
-  &:hover {
+  &[required]:invalid {
+    border-color: $border-color-input-error;
+  }
+
+  &:hover,
+  &[required]:hover {
     border-color: $input-border-green-color;
   }
 
   &:focus,
-  &:active {
+  &[required]:focus,
+  &:active,
+  &[required]:active {
     border-color: $input-border-green-color;
   }
 
@@ -333,6 +340,10 @@ $input-height: 52px;
       transform: translateX(-35px) translateY(calc(-50% - 1px));
     }
   }
+}
+
+.form-fieldset__input:invalid + .form-fieldset__input-icon {
+  fill: $border-color-input-error;
 }
 
 .form-fieldset__input:hover + .form-fieldset__input-icon,
