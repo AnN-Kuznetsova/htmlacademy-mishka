@@ -28,6 +28,10 @@
     }
   }
 
+  &:focus {
+    @include focus-link();
+  }
+
   &:active {
     color: rgba($link-text-color-hover, 0.3);
 

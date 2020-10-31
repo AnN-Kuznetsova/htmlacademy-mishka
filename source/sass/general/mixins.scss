@@ -180,6 +180,60 @@
   }
 }
 
+//  :focus
+@mixin focus($shadow-color: $link-border-color-hover, $background-color: $bg-color-base) {
+  outline: none;
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 7px $background-color,
+    0 0 0 8px $shadow-color;
+}
+
+//  :focus ссылки
+@mixin focus-link($shadow-color: $link-border-color-hover, $background-color: $bg-color-base) {
+  outline: none;
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 10px $background-color,
+    0 0 0 11px $shadow-color;
+}
+
+/* //  :focus кнопки
+@mixin focus-button($shadow-color: $link-border-color-hover, $background-color: $bg-color-base) {
+  outline: none;
+  box-shadow:
+    inset 0 -7px 0 0 $background-color,
+    inset 0 -9px 0 0 $shadow-color;
+} */
+
+/*//  :focus картинки
+@mixin focus-img($shadow-color: $bg-color-third) {
+  position: relative;
+  outline: none;
+  overflow: visible;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5%;
+    left: 5%;
+
+    width: 90%;
+    height: 90%;
+
+    border-radius: 10px;
+    border: 1px solid $shadow-color;
+
+    @include tablet-width() {
+      top: -2.5%;
+      left: -2.5%;
+
+      width: 105%;
+      height: 105%;
+    }
+  }
+} */
+
 
 /*  Кастомные поля выбора   */
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */

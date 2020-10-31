@@ -19,8 +19,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -61px;
-  right: -7px;
+  top: -60px;
+  right: -8px;
   z-index: 2;
 
   display: block;
@@ -38,9 +38,9 @@
     opacity: 0.6;
   }
 
-  /* &:focus {
+  &:focus {
     @include focus();
-  } */
+  }
 
   &:active {
     opacity: 0.3;
@@ -56,8 +56,8 @@
   &::after {
     position: absolute;
     content: "";
-    top: 20px;
-    left: 9px;
+    top: 50%;
+    left: 50%;
 
     width: 27px;
     height: 2px;
@@ -66,19 +66,19 @@
   }
 
   &::before {
-    transform: rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
 
   &::after {
-    transform: rotate(-45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   position: absolute;
   content: "";
-  top: 14px;
-  left: 12px;
+  top: 50%;
+  left: 50%;
 
   width: 20px;
   height: 2px;
@@ -87,6 +87,8 @@
   box-shadow:
     0 6px 0 0 $menu-button-color,
     0 12px 0 0 $menu-button-color;
+
+  transform: translateX(-50%) translateY(-7px);
 }
 
 /* .main-nav--opened .main-nav__list {
@@ -158,15 +160,6 @@
 .main-nav__item {
   position: relative;
 
-  &:hover .main-nav__image,
-  &:focus .main-nav__image {
-    fill: $cart-icon-color-hover;
-  }
-
-  &:active .main-nav__image {
-    fill: rgba($cart-icon-color-hover, 0.3);
-  }
-
   @include mobile-width-only() {
     @include decorative-line-border();
   }
@@ -202,6 +195,66 @@
   }
 }
 
+.main-nav__link {
+  @include little-title();
+
+  position: relative;
+  display: block;
+
+  margin: 0;
+  padding: 27px 0 28px 45px;
+
+  text-align: left;
+
+  cursor: pointer;
+  outline: none;
+
+  &--active {
+    cursor: default;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__list--site-nav .main-nav__link {
+  @include tablet-width() {
+    @include font-options($font-bold, 15px, 24px, $text-title-color);
+
+    padding: 18px 0;
+  }
+
+  @include desktop-width() {
+    @include font-options($font-bold, 17px, 24px, $text-title-color);
+
+    padding: 30px 0 35px;
+  }
+}
+
+.main-nav__list--user-nav .main-nav__link {
+  @include tablet-width() {
+    @include font-options($font-bold, 17px, 24px, $text-title-color);
+
+    min-height: 89px;
+    padding: 30px 0 35px 82px;
+  }
+
+  @include desktop-width() {
+    @include font-options($font-bold, 17px, 24px, $text-title-color);
+
+    padding: 30px 0 35px 83px;
+  }
+}
+
+.main-nav__list--special .main-nav__link {
+  @include desktop-width() {
+    @include font-options($font-bold, 15px, 24px, $text-title-color);
+
+    padding: 18px 0;
+  }
+}
+
 .main-nav__image {
   position: absolute;
   top: 50%;
@@ -234,70 +287,6 @@
   }
 }
 
-.main-nav__link {
-  @include little-title();
-
-  position: relative;
-  display: block;
-
-  margin: 0;
-  padding: 27px 0 28px 45px;
-
-  text-align: left;
-
-  cursor: pointer;
-  outline: none;
-
-  &[href]:hover,
-  &[href]:focus {
-    opacity: 0.6;
-  }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
-
-  &--active {
-    cursor: default;
-  }
-}
-
-.main-nav__list--site-nav .main-nav__link {
-  @include tablet-width() {
-    @include font-options($font-bold, 15px, 24px, $text-title-color);
-
-    padding: 18px 0;
-  }
-
-  @include desktop-width() {
-    @include font-options($font-bold, 17px, 24px, $text-title-color);
-
-    padding: 30px 0 35px;
-  }
-}
-
-.main-nav__list--user-nav .main-nav__link {
-  @include tablet-width() {
-    @include font-options($font-bold, 17px, 24px, $text-title-color);
-
-    padding: 30px 0 35px 82px;
-  }
-
-  @include desktop-width() {
-    @include font-options($font-bold, 17px, 24px, $text-title-color);
-
-    padding: 30px 0 35px 83px;
-  }
-}
-
-.main-nav__list--special .main-nav__link {
-  @include desktop-width() {
-    @include font-options($font-bold, 15px, 24px, $text-title-color);
-
-    padding: 18px 0;
-  }
-}
-
 .main-nav__link-text {
   &--active {
     box-shadow:
@@ -319,6 +308,36 @@
         0 4px 0 0 $bg-color-base,
         0 6px 0 0 $link-text-color-hover;
     }
+  }
+}
+
+.main-nav__link[href]:hover .main-nav__image,
+.main-nav__link[href]:focus .main-nav__image {
+  fill: $cart-icon-color-hover;
+}
+
+.main-nav__link[href]:hover .main-nav__link-text,
+.main-nav__link[href]:focus .main-nav__link-text {
+  opacity: 0.6;
+}
+
+.main-nav__link[href]:focus .main-nav__link-text {
+  @include focus();
+}
+
+.main-nav__list--site-nav .main-nav__link[href]:focus .main-nav__link-text {
+  @include tablet-width() {
+    @include focus($link-border-color-hover, $bg-color-grey-2);
+  }
+
+  @include desktop-width() {
+    @include focus();
+  }
+}
+
+.main-nav__list--special .main-nav__link[href]:focus .main-nav__link-text {
+  @include desktop-width() {
+    @include focus($link-border-color-hover, $bg-color-grey-2);
   }
 }
 

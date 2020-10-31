@@ -1,9 +1,15 @@
 .footer-logo {
   height: 34px;
 
+  outline: none;
+
   &:hover .footer-logo__image,
   &:focus .footer-logo__image {
     fill: $social-color-hover;
+  }
+
+  &:focus .footer-logo__image {
+    @include focus($social-color-hover, $bg-color-grey);
   }
 
   &:active .footer-logo__image {

@@ -20,9 +20,9 @@
     color: $btn-text-color-hover;
   }
 
-  /* &:focus {
+  &:focus {
     @include focus();
-  } */
+  }
 
   &:active {
     background-color: $btn-base-color-hover;

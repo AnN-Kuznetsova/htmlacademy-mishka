@@ -4,6 +4,21 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  outline: none;
+
+  &:hover .copyright__image,
+  &:focus .copyright__image {
+    fill: $copyright-image-color-hover;
+  }
+
+  &:focus .copyright__container {
+    @include focus($copyright-image-color-hover, $bg-color-grey);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet-width() {
     justify-content: flex-end;
   }
@@ -21,15 +36,6 @@
   outline: none;
   border-top: 1px solid $border-color-grey-2;
 
-  &:hover .copyright__image,
-  &:focus .copyright__image {
-    fill: $copyright-image-color-hover;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @include tablet-width() {
     width: 184px;
     padding: 0;
@@ -45,7 +51,7 @@
 .copyright__logo {
   width: 27px;
   height: 34px;
-  padding-top: 4px;
+  padding-top: 3px;
 }
 
 .copyright__image {

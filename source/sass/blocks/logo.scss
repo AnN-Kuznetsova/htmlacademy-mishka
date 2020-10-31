@@ -37,3 +37,11 @@
     height: 72px;
   }
 }
+
+.logo[href]:focus .logo__image {
+  @include focus();
+}
+
+.logo[href]:active .logo__image {
+  box-shadow: none;
+}
