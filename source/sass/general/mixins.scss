@@ -115,13 +115,14 @@
   }
 }
 
-@mixin item-background() {
-  &:hover,
-  &:focus {
+//  тень при взаимодействии
+@mixin item-background($element: '') {
+  &:hover #{$element},
+  &:focus #{$element} {
     box-shadow: 0 6px 10px 0 rgba($shadow-base-color, 0.1);
   }
 
-  &:active {
+  &:active #{$element} {
     box-shadow: 0 3px 5px 0 rgba($shadow-base-color, 0.1);
   }
 }
@@ -198,16 +199,8 @@
     0 0 0 11px $shadow-color;
 }
 
-/* //  :focus кнопки
-@mixin focus-button($shadow-color: $link-border-color-hover, $background-color: $bg-color-base) {
-  outline: none;
-  box-shadow:
-    inset 0 -7px 0 0 $background-color,
-    inset 0 -9px 0 0 $shadow-color;
-} */
-
-/*//  :focus картинки
-@mixin focus-img($shadow-color: $bg-color-third) {
+//  :focus картинки
+@mixin focus-img($shadow-color: $link-border-color-hover) {
   position: relative;
   outline: none;
   overflow: visible;
@@ -215,24 +208,16 @@
   &::after {
     position: absolute;
     content: "";
-    top: 5%;
-    left: 5%;
+    top: -2.5%;
+    left: -2.5%;
 
-    width: 90%;
-    height: 90%;
+    width: 105%;
+    height: 105%;
 
     border-radius: 10px;
     border: 1px solid $shadow-color;
-
-    @include tablet-width() {
-      top: -2.5%;
-      left: -2.5%;
-
-      width: 105%;
-      height: 105%;
-    }
   }
-} */
+}
 
 
 /*  Кастомные поля выбора   */

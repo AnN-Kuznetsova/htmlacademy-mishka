@@ -7,6 +7,7 @@
 
   margin-bottom: -150px;
 
+
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 0, 63px);
 
@@ -26,6 +27,8 @@
 .making__player {
   position: relative;
   top: 246px;
+
+  @include item-background('+ .making__wrapper');
 
   @include tablet-width() {
     top: auto;

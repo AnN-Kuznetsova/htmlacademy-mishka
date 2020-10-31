@@ -3,6 +3,8 @@
   margin-left: auto;
   margin-right: auto;
 
+  @include item-background('.catalog-product__wrapper');
+
   @include tablet-width() {
     display: flex;
     flex-direction: row;
@@ -22,6 +24,10 @@
   height: 195px;
 
   background-color: $photo-bg-color-grey;
+
+  &:focus {
+    @include focus-img();
+  }
 
   @include tablet-width() {
     flex-shrink: 0;
@@ -46,7 +52,6 @@
   @include container(260px, 28px, 26px, 19px);
 
   border: 1px solid $border-color-grey-3;
-  @include item-background();
 
   @include tablet-width() {
     @include container(auto, 26px, 25px, 19px);
@@ -60,6 +65,14 @@
   @include desktop-width() {
     @include container(auto, 26px, 25px, 19px);
     margin: 0;
+  }
+}
+
+.catalog-product__title-link {
+  display: block;
+
+  &:focus {
+    @include focus();
   }
 }
 
@@ -128,10 +141,14 @@
 .catalog-product__add-cart-link {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+
+  margin-right: -11px;
+
+  outline: none;
 
   &:hover .catalog-product__add-cart-image,
   &:focus .catalog-product__add-cart-image {

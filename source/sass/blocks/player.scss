@@ -31,7 +31,6 @@
   height: 77px;
 
   background-color: transparent;
-  outline: none;
   border: none;
   cursor: pointer;
 
@@ -46,6 +45,11 @@
     &:hover,
     &:focus {
       background-size: 121px 92px;
+    }
+
+    &:focus {
+      outline-color: $link-border-color-hover;
+      outline-offset: 7px;
     }
 
     &:active {
