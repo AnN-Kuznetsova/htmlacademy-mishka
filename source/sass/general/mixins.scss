@@ -223,7 +223,7 @@
 /*  Кастомные поля выбора   */
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
 
-@mixin custom-choice($choice-size: 40px) {
+@mixin custom-choice($choice-size: 40px, $color-base: $input-border-base-color, $color-hover: $input-border-green-color) {
   position: relative;
 
   padding-left: $choice-size +  22px;
@@ -240,19 +240,19 @@
     height: $choice-size;
 
     background-color: transparent;
-    border: 2px solid $input-border-base-color;
+    border: 2px solid $color-base;
   }
 
   &--radio::before {
     border-radius: 50%;
   }
 
-  &:hover::before {
-    border-color: $input-border-green-color;
+  &:hover {
+    color: $color-hover;
   }
 
-  &:active::before {
-    border-color: $border-color-grey-4;
+  &:hover::before {
+    border-color: $color-hover;
   }
 
   @include tablet-width() {
@@ -260,23 +260,38 @@
   }
 }
 
-//  фокус
-/* @mixin custom-choice--focus() {
+//  focus
+@mixin custom-choice--focus($color-base: $bg-color-base, $color-focus: $link-border-color-hover, $color-content-focus: $input-border-green-color) {
+  color: $color-content-focus;
+
   outline: none;
   border-radius: 1px;
   box-shadow:
-    0 0 0 10px $bg-color-base,
-    0 0 0 11px $bg-color-third;
+    0 0 0 10px $color-base,
+    0 0 0 11px $color-focus;
+
+  &::before {
+    border-color: $color-content-focus;
+  }
 
   @include tablet-width() {
     box-shadow:
-      0 0 0 15px $bg-color-base,
-      0 0 0 16px $bg-color-third;
+      0 0 0 15px $color-base,
+      0 0 0 16px $color-focus;
   }
-} */
+}
+
+//  active
+@mixin custom-choice--active($color-active: $border-color-grey-4) {
+  color: $color-active;
+
+  &::before {
+    border-color: $color-active;
+  }
+}
 
 // checked
-@mixin custom-choice--checked($choice-size: 39px) {
+@mixin custom-choice--checked($choice-size: 39px, $color-checked: $input-border-green-color) {
   &::after {
     position: absolute;
     content: "";
@@ -290,7 +305,7 @@
     width: ($choice-size / 2.4);
     height: ($choice-size / 2.4);
 
-    background-color: $input-border-green-color;
+    background-color: $color-checked;
     border-radius: 50%;
 
     transform: translateX(-50%);

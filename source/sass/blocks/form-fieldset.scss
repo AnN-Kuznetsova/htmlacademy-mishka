@@ -16,7 +16,7 @@ $input-height: 52px;
   margin: 0;
 
   border: none;
-  overflow: hidden;
+  overflow: visible;
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 50px, 50px);
@@ -414,20 +414,21 @@ $input-height: 52px;
   }
 }
 
-//  hover
-.form-fieldset__choice-input:hover ~ .form-fieldset__choice-label {
-  color: $input-border-green-color;
+//  focus
+.form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
+  @include custom-choice--focus();
+}
+
+.form-fieldset__choice-input--gray:focus ~ .form-fieldset__choice-label {
+  @include tablet-width() {
+    @include custom-choice--focus($bg-color-grey);
+  }
 }
 
 //  active
 .form-fieldset__choice-input:active ~ .form-fieldset__choice-label {
-  color: $border-color-grey-4;
+  @include custom-choice--active();
 }
-
-//  фокус
-/* .form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
-  @include custom-choice--focus();
-} */
 
 //  checked
 .form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
