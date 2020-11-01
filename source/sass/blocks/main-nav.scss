@@ -213,7 +213,7 @@
     cursor: default;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
@@ -327,6 +327,16 @@
 
 .main-nav__list--site-nav .main-nav__link[href]:focus .main-nav__link-text {
   @include tablet-width() {
+    @include focus($link-border-color-hover, $bg-color-grey);
+  }
+
+  @include desktop-width() {
+    @include focus();
+  }
+}
+
+.main-nav__list--site-nav-index .main-nav__link[href]:focus .main-nav__link-text {
+  @include tablet-width() {
     @include focus($link-border-color-hover, $bg-color-grey-2);
   }
 
@@ -336,6 +346,12 @@
 }
 
 .main-nav__list--special .main-nav__link[href]:focus .main-nav__link-text {
+  @include desktop-width() {
+    @include focus($link-border-color-hover, $bg-color-grey);
+  }
+}
+
+.main-nav__list--special-index .main-nav__link[href]:focus .main-nav__link-text {
   @include desktop-width() {
     @include focus($link-border-color-hover, $bg-color-grey-2);
   }
