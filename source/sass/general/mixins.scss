@@ -59,7 +59,7 @@
   position: relative;
 
   margin: 0;
-  @include container($mobile-width, $mobile-padding, 71px, 76px);
+  @include container($mobile-width, $mobile-padding, 72px, 76px);
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;
@@ -67,16 +67,15 @@
   text-align: center;
 
   background-color: transparent;
-  border-top: 1px solid $border-color-grey;
 
   @include tablet-width() {
     @include font-options($font-bold, 43px, 50px, $text-title-color);
-    @include container($tablet-width, $tablet-padding, 95px, 91px);
+    @include container($tablet-width, $tablet-padding, 96px, 91px);
   }
 
   @include desktop-width() {
     @include font-options($font-bold, 53px, 57px, $text-title-color);
-    @include container($desktop-width, $desktop-padding, 93px, 121px);
+    @include container($desktop-width, $desktop-padding, 94px, 121px);
   }
 }
 
@@ -128,10 +127,13 @@
 }
 
 //  линейные бордеры на всю ширину
-@mixin decorative-line-border($box-width: 100vw, $box-height: 0, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
+@mixin decorative-line-border($box-width: 100vw, $box-height: 100%, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
+  position: relative;
+
   &::after {
     position: absolute;
     content: "";
+    top: 0;
     left: 50%;
 
     width: $box-width;
@@ -139,6 +141,7 @@
     height: $box-height;
 
     border-#{$border-side}: $border-width solid $border-color;
+    pointer-events: none;
     transform: translateX(-50%);
   }
 }

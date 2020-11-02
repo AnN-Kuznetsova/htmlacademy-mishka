@@ -1,5 +1,13 @@
 .page-header {
   background-color: $bg-color-base;
+
+  @include tablet-width() {
+    background-color: $bg-color-grey;
+
+    &--index {
+      background-color: $bg-color-grey-2;
+    }
+  }
 }
 
 .page-header__container {
@@ -9,11 +17,10 @@
     @include container($tablet-width, $tablet-padding);
 
     position: relative;
-    margin-top: -46px;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: -46px;
   }
 
   @include desktop-width() {
@@ -31,10 +38,6 @@
 
   @include mobile-width-only() {
     @include decorative-line-border();
-
-    &::after {
-      transform: translateX(-50%) translateY(57px);
-    }
   }
 
   @include tablet-width() {

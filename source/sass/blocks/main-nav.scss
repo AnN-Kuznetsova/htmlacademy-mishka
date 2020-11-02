@@ -1,3 +1,18 @@
+@mixin background($bg-color: $bg-color-base) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+
+    background-color: $bg-color;
+  }
+}
+
 .main-nav {
   position: relative;
 
@@ -10,7 +25,8 @@
     justify-content: space-between;
     z-index: 5;
 
-    width: 100%
+    width: 100%;
+    min-height: 89px;
   }
 }
 
@@ -91,10 +107,6 @@
   transform: translateX(-50%) translateY(-7px);
 }
 
-/* .main-nav--opened .main-nav__list {
-  min-height: 66px;
-} */
-
 .main-nav--closed .main-nav__list {
   @include mobile-width-only() {
     display: none;
@@ -113,42 +125,64 @@
 .main-nav__list {
   @include list-style-none();
 
-  &--special {
-    display: none;
-  }
-
   @include tablet-width() {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
 
-    &--site-nav {
+  &--site-nav {
+    @include tablet-width() {
       width: 50%;
     }
 
-    &--user-nav {
+    @include desktop-width() {
+      order: -1;
+      width: 42%;
+
+      @include decorative-line-border();
+    }
+
+    @include desktop-width () {
+      width: 50%;
+      min-height: 88px;
+      padding-right: 84px;
+
+      @include background();
+    }
+  }
+
+  &--user-nav {
+    @include tablet-width() {
       order: -1;
       justify-content: flex-end;
 
       width: 100%;
+      min-height: 88px;
+      padding-left: 40%;
+
+      @include background();
+      @include decorative-line-border();
+
+      &::before {
+        right: - $tablet-padding;
+      }
     }
 
-    &--special {
-      display: none;
+    @include desktop-width() {
+      width: 50%;
+      padding-left: 150px;
+
+      &::before {
+        left: 0;
+      }
     }
   }
 
-  @include desktop-width() {
-    &--site-nav {
-      order: -1;
-      width: 42%;
-    }
+  &--special {
+    display: none;
 
-    &--user-nav {
-      width: 42%;
-    }
-
-    &--special {
+    @include desktop-width() {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -288,6 +322,10 @@
 }
 
 .main-nav__link-text {
+  display: block;
+  width: fit-content;
+  margin-right: 20px;
+
   &--active {
     box-shadow:
       0 4px 0 0 $bg-color-base,
@@ -314,6 +352,10 @@
 .main-nav__link[href]:hover .main-nav__image,
 .main-nav__link[href]:focus .main-nav__image {
   fill: $cart-icon-color-hover;
+}
+
+.main-nav__list--user-nav .main-nav__link-text {
+  margin-right: 0;
 }
 
 .main-nav__link[href]:hover .main-nav__link-text,
@@ -368,9 +410,15 @@
 
   @include tablet-width() {
     display: block;
+    width: 40%;
     margin: 0;
     padding: 17px 0;
 
     @include font-options($font-regular, 15px, 24px, $text-base-color);
+    text-align: right;
+  }
+
+  @include desktop-width() {
+    width: 350px;
   }
 }
