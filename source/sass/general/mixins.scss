@@ -127,7 +127,7 @@
 }
 
 //  линейные бордеры на всю ширину
-@mixin decorative-line-border($box-width: 100vw, $box-height: 100%, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
+@mixin decorative-line-border($box-width: 100%, $box-height: 100%, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
   position: relative;
 
   &::after {
@@ -147,13 +147,15 @@
 }
 
 //  волнистые бордеры на всю ширину
-@mixin decorative-wavy-border-line() {
+@mixin decorative-wavy-border-line($width: 100%) {
+  position: relative;
+
   &::after {
     position: absolute;
     content: "";
     left: 50%;
 
-    width: 100vw;
+    width: $width;
     min-width: $mobile-width;
     height: 7px;
 

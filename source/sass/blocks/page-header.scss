@@ -1,6 +1,10 @@
 .page-header {
   background-color: $bg-color-base;
 
+  @include mobile-width-only() {
+    overflow-x: hidden;
+  }
+
   @include tablet-width() {
     background-color: $bg-color-grey;
 
@@ -40,7 +44,7 @@
   padding: 22px 0 17px;
 
   @include mobile-width-only() {
-    @include decorative-line-border();
+    @include decorative-line-border(100vw);
   }
 
   @include tablet-width() {
