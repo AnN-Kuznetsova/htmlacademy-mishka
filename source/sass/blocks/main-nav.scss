@@ -118,7 +118,7 @@
       min-height: 89px;
 
       background-color: $bg-color-base;
-      border-bottom: 1px solid $border-color-grey;
+      border-bottom: 1px solid $border-color-gray;
     }
   }
 
@@ -130,7 +130,7 @@
       min-height: 89px;
 
       background-color: $bg-color-base;
-      border-bottom: 1px solid $border-color-grey;
+      border-bottom: 1px solid $border-color-gray;
     }
 
     @include desktop-width() {
@@ -223,7 +223,7 @@
     width: calc(50% - 35px);
     margin-right: 35px;
 
-    border-right: 1px solid $border-color-grey;
+    border-right: 1px solid $border-color-gray;
 
     &:nth-child(even) {
       border-right: none;
@@ -233,7 +233,7 @@
 
 .main-nav__list--user-nav .main-nav__item {
   @include tablet-width() {
-    border-left: 1px solid $border-color-grey;
+    border-left: 1px solid $border-color-gray;
   }
 }
 
@@ -350,7 +350,7 @@
   @include tablet-width() {
     &--active {
       box-shadow:
-        0 4px 0 0 $bg-color-grey,
+        0 4px 0 0 $bg-color-gray,
         0 6px 0 0 $link-text-color-hover;
     }
   }
@@ -384,7 +384,7 @@
 
 .main-nav__list--site-nav .main-nav__link[href]:focus .main-nav__link-text {
   @include tablet-width() {
-    @include focus($link-border-color-hover, $bg-color-grey);
+    @include focus($link-border-color-hover, $bg-color-gray);
   }
 
   @include desktop-width() {
@@ -394,7 +394,7 @@
 
 .main-nav__list--site-nav-index .main-nav__link[href]:focus .main-nav__link-text {
   @include tablet-width() {
-    @include focus($link-border-color-hover, $bg-color-grey-2);
+    @include focus($link-border-color-hover, $bg-color-gray-2);
   }
 
   @include desktop-width() {
@@ -404,13 +404,13 @@
 
 .main-nav__list--special .main-nav__link[href]:focus .main-nav__link-text {
   @include desktop-width() {
-    @include focus($link-border-color-hover, $bg-color-grey);
+    @include focus($link-border-color-hover, $bg-color-gray);
   }
 }
 
 .main-nav__list--special-index .main-nav__link[href]:focus .main-nav__link-text {
   @include desktop-width() {
-    @include focus($link-border-color-hover, $bg-color-grey-2);
+    @include focus($link-border-color-hover, $bg-color-gray-2);
   }
 }
 

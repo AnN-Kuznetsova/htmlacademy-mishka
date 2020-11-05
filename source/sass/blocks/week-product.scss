@@ -146,7 +146,7 @@
   min-height: 40px;
   padding: 7px 0 8px;
 
-  border-bottom: 1px solid $border-color-grey;
+  border-bottom: 1px solid $border-color-gray;
 
   @include tablet-width() {
     min-height: 39px;
@@ -204,7 +204,7 @@
   margin: 0 auto;
   margin-top: -441px;
 
-  background-color: $photo-bg-color-grey;
+  background-color: $photo-bg-color-gray;
 
   @include tablet-width() {
     width: 333px;

@@ -127,7 +127,7 @@
 }
 
 //  линейные бордеры на всю ширину
-@mixin decorative-line-border($box-width: 100%, $box-height: 100%, $border-width: 1px, $border-color: $border-color-grey, $border-side: "bottom") {
+@mixin decorative-line-border($box-width: 100%, $box-height: 100%, $border-width: 1px, $border-color: $border-color-gray, $border-side: "bottom") {
   position: relative;
 
   &::after {
@@ -287,7 +287,7 @@
 }
 
 //  active
-@mixin custom-choice--active($color-active: $border-color-grey-4) {
+@mixin custom-choice--active($color-active: $border-color-gray-4) {
   color: $color-active;
 
   &::before {

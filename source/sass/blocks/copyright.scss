@@ -12,7 +12,7 @@
   }
 
   &:focus .copyright__container {
-    @include focus($copyright-image-color-hover, $bg-color-grey);
+    @include focus($copyright-image-color-hover, $bg-color-gray);
   }
 
   &:active {
@@ -34,7 +34,7 @@
   padding: 18px 39px 9px 37px;
 
   outline: none;
-  border-top: 1px solid $border-color-grey-2;
+  border-top: 1px solid $border-color-gray-2;
 
   @include tablet-width() {
     width: 184px;

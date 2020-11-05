@@ -42,7 +42,7 @@
 .making__wrapper {
   @include container(260px, 33px, 23px, 32px);
 
-  border: 1px solid $border-color-grey;
+  border: 1px solid $border-color-gray;
   @include item-background();
 
   @include tablet-width() {

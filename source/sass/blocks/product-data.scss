@@ -21,7 +21,7 @@
 
   &--product-color {
     @include tablet-width() {
-      background-color: $bg-color-grey;
+      background-color: $bg-color-gray;
     }
   }
 }

@@ -30,12 +30,12 @@
 
   @include font-options($font-bold, 17px, 16px, $text-base-color);
 
-  border: 2px solid $border-color-grey;
+  border: 2px solid $border-color-gray;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    border: 2px solid $border-color-grey-4;
+    border: 2px solid $border-color-gray-4;
   }
 }
 

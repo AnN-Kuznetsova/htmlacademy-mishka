@@ -20,7 +20,7 @@
   width: 260px;
   height: 195px;
 
-  background-color: $photo-bg-color-grey;
+  background-color: $photo-bg-color-gray;
 
   &:focus {
     @include focus-img();
@@ -48,7 +48,7 @@
 .catalog-product__wrapper {
   @include container(260px, 28px, 26px, 19px);
 
-  border: 1px solid $border-color-grey-3;
+  border: 1px solid $border-color-gray-3;
 
   @include tablet-width() {
     @include container(auto, 26px, 25px, 19px);
@@ -111,7 +111,7 @@
 
   padding-top: 14px;
 
-  border-top: 1px solid $border-color-grey;
+  border-top: 1px solid $border-color-gray;
 
   @include tablet-width() {
     margin-top: auto;

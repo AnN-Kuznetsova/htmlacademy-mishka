@@ -9,7 +9,7 @@
   }
 
   &:focus .footer-logo__image {
-    @include focus($social-color-hover, $bg-color-grey);
+    @include focus($social-color-hover, $bg-color-gray);
   }
 
   &:active .footer-logo__image {

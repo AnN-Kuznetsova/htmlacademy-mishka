@@ -21,7 +21,7 @@
 .modal__container {
   @include container(320px, $mobile-padding, 31px, 46px);
 
-  border-top: 1px solid $border-color-grey-4;
+  border-top: 1px solid $border-color-gray-4;
   box-shadow: 0 5px 10px 0 rgba($shadow-base-color, 0.25);
 
   @include tablet-width() {

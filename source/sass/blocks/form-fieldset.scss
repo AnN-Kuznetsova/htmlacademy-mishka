@@ -421,7 +421,7 @@ $input-height: 52px;
 
 .form-fieldset__choice-input--gray:focus ~ .form-fieldset__choice-label {
   @include tablet-width() {
-    @include custom-choice--focus($bg-color-grey);
+    @include custom-choice--focus($bg-color-gray);
   }
 }
 
