@@ -26,11 +26,11 @@
 
 .copyright__container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  width: 260px;
+  width: 100%;
   padding: 18px 39px 9px 37px;
 
   outline: none;
@@ -46,6 +46,8 @@
 
 .copyright__intro {
   @include font-options($font-bold, 19px, 18px, $text-title-color);
+
+  padding-right: 20px;
 }
 
 .copyright__logo {

@@ -1,5 +1,5 @@
 .features__container {
-  @include container($mobile-width, $mobile-padding, 27px, 20px);
+  @include container($mobile-width, $mobile-padding, 28px, 20px);
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 49px, 28px);
@@ -13,7 +13,7 @@
 .features__title {
   @include regular-title();
 
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   @include tablet-width() {
     margin-bottom: 47px;
@@ -23,21 +23,16 @@
 .features__list {
   @include list-style-none();
 
-  position: relative;
-    left: 50%;
-
   display: flex;
   flex-direction: column;
 
-  width: 260px;
-
-  transform: translateX(-50%);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 
   @include tablet-width() {
     flex-direction: row;
     flex-wrap: wrap;
-
-    width: 670px;
   }
 
   @include desktop-width() {
@@ -48,9 +43,9 @@
 .features__item {
   position: relative;
 
-  @include font-options($font-bold, 17px, 20px, $text-title-color);
-
   padding: 55px 0 28px;
+
+  @include font-options($font-bold, 17px, 20px, $text-title-color);
 
   &::before {
     position: absolute;
@@ -104,9 +99,8 @@
   }
 
   @include tablet-width() {
-    padding: 56px 35px 56px 0;
-
     width: 50%;
+    padding: 56px 35px 56px 0;
 
     @include font-options($font-bold, 20px, 22px, $text-title-color);
 

@@ -11,14 +11,14 @@
   flex-direction: column;
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding, 45px, 63px);
+    @include container($tablet-width, $tablet-padding, 45px, 69px);
 
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 70px, 90px);
+    @include container($desktop-width, $desktop-padding, 70px, 96px);
   }
 }
 
@@ -116,19 +116,19 @@
   margin-bottom: 16px;
 
   @include tablet-width() {
-    margin-bottom: 39px;
+    margin-bottom: 36px;
 
     @include font-options($font-regular, 17px, 30px, $text-base-color);
   }
 
   @include desktop-width() {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 }
 
 .week-product__info {
   width: 100%;
-  margin-bottom: 26px;
+  margin-bottom: 365px;
 
   @include tablet-width() {
     margin-bottom: auto;
@@ -146,16 +146,18 @@
   display: inline-block;
   vertical-align: top;
   min-height: 40px;
-  padding: 6px 0 9px;
+  padding: 7px 0 8px;
 
   border-bottom: 1px solid $border-color-grey;
 
   @include tablet-width() {
     min-height: 39px;
+    padding-top: 9px;
   }
 
   @include tablet-width() {
     min-height: 40px;
+    padding-top: 7px;
   }
 }
 
@@ -163,6 +165,7 @@
   flex-shrink: 0;
 
   width: 36.9%;
+  padding-right: 20px;
 
   @include tablet-width() {
     width: 33.6%;
@@ -176,19 +179,18 @@
 .week-product__price-title {
   @include little-title();
 
-  position: relative;
-  top: 339px;
-
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   color: $text-base-color;
   text-align: center;
 
   @include tablet-width() {
-    top: 0;
-
     margin-bottom: 35px;
+  }
+
+  @include desktop-width() {
+    margin-bottom: 34px;
   }
 }
 
@@ -196,37 +198,17 @@
   display: inline-block;
 }
 
-.week-product__button {
-  position: relative;
-  top: 339px;
-
-  @include tablet-width() {
-    top: 0;
-
-    margin-bottom: 7px;
-  }
-
-  @include desktop-width() {
-    margin-bottom: 6px;
-  }
-}
-
 .week-product__photo {
-  position: relative;
-  top: -103px;
-  left: 50%;
+  display: block;
 
   width: 260px;
   height: 315px;
-  margin: 0 0 17px;
+  margin: 0 auto;
+  margin-top: -441px;
 
   background-color: $photo-bg-color-grey;
 
-  transform: translateX(-50%);
-
   @include tablet-width() {
-    top: 0;
-
     width: 333px;
     height: 404px;
     margin: 8px 0 0;

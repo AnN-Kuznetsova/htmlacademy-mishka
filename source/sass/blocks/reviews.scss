@@ -40,9 +40,8 @@
 
   @include tablet-width() {
     order: 0;
-    width: calc(100% - 175px);
+    width: 50%;
     margin: 0 0 0 -5px;
-    padding-right: 175px;
   }
 
   @include desktop-width() {
@@ -82,13 +81,13 @@
   @include font-options($font-regular, 15px, 30px, $text-base-color);
 
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   padding: 0;
 
   @include tablet-width() {
     @include font-options($font-regular, 17px, 30px, $text-base-color);
 
-    margin-bottom: 59px;
+    margin-bottom: 60px;
   }
 
   @include desktop-width() {
@@ -106,6 +105,8 @@
 
   @include tablet-width() {
     @include font-options($font-bold, 18px, 24px, $text-title-color);
+
+    width: 70%;
   }
 
   @include desktop-width() {
@@ -117,7 +118,7 @@
   @include font-options($font-regular, 17px, 20px, $text-base-color);
 
   display: block;
-  padding-top: 11px;
+  padding-top: 10px;
 
   @include tablet-width() {
     @include font-options($font-regular, 17px, 30px, $text-base-color);
@@ -204,10 +205,11 @@
 .reviews__button {
   @include tablet-width() {
     order: 1;
-    width: 175px;
+    width: min-content;
+    min-width: 175px;
+    max-width: 40%;
+    height: min-content;
     margin: 2px 0 0 auto;
-    padding-left: 5px;
-    padding-right: 5px;
   }
 
   @include desktop-width() {

@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
 
-  padding: 22px 0 15px;
+  padding: 22px 0 17px;
 
   @include mobile-width-only() {
     @include decorative-line-border();

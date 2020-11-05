@@ -6,8 +6,9 @@
   }
 
   @include desktop-width() {
-    @include container(50%, 0, 69px, 90px);
+    @include container(50%, 0, 70px, 90px);
     padding-left: 175px;
+    padding-right: 35px;
   }
 }
 
@@ -87,5 +88,9 @@
 
   @include tablet-width() {
     padding-right: 35px;
+  }
+
+  @include desktop-width() {
+    padding-right: 0;
   }
 }
