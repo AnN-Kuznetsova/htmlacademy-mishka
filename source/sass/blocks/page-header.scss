@@ -14,23 +14,26 @@
   @include container($mobile-width, $mobile-padding, 0, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
+    @include container($tablet-width, 0, 0, 0);
 
     position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
     margin-top: -46px;
   }
 
   @include desktop-width() {
-    margin-top: -72px;
+    @include container($desktop-width, 0, 0, 0);
+
+    max-width: 100%;
+    margin: -72px 0 0;
   }
 }
 
 .page-header__logo-wrapper {
   position: relative;
-
   display: flex;
   justify-content: center;
 
@@ -45,13 +48,15 @@
     top: 68px;
     left: -2px;
 
-    margin: 0;
+    margin: 0 0 0 $tablet-padding;
     padding: 0;
   }
 
   @include desktop-width() {
     top: 81px;
     left: 50%;
+
+    margin: 0;
 
     transform: translateX(-50%);
   }
