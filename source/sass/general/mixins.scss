@@ -59,7 +59,7 @@
   position: relative;
 
   margin: 0;
-  @include container($mobile-width, $mobile-padding, 72px, 76px);
+  @include container($mobile-width, $mobile-padding, 71px, 75px);
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;

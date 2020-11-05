@@ -251,7 +251,7 @@
   display: block;
 
   margin: 0;
-  padding: 27px 0 28px 45px;
+  padding: 26px 0 29px 45px;
 
   text-align: left;
 
@@ -311,23 +311,23 @@
 
   fill: rgba($cart-icon-color-base, 0.2);
 
-  transform: translateY(-50%);
-
   &--search {
     width: 18px;
     height: 18px;
 
-    transform: translateX(2px) translateY(calc(-50% + 2px));
+    transform: translateX(2px) translateY(-50%);
   }
 
   &--cart {
     width: 21px;
     height: 18px;
+
+    transform: translateY(-50%);
   }
 
   @include tablet-width() {
     &--search {
-      transform: translateX(32px) translateY(calc(-50% + 1px));
+      transform: translateX(32px) translateY(-50%);
     }
 
     &--cart {

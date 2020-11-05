@@ -1,7 +1,5 @@
 .catalog-product {
   width: 260px;
-  margin-left: auto;
-  margin-right: auto;
 
   @include item-background('.catalog-product__wrapper');
 
@@ -14,7 +12,6 @@
   @include desktop-width() {
     flex-direction: column;
     width: 316px;
-    margin: 0;
   }
 }
 
@@ -112,7 +109,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding-top: 13px;
+  padding-top: 14px;
 
   border-top: 1px solid $border-color-grey;
 
@@ -143,10 +140,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
 
-  margin-right: -11px;
+  margin: 0 -11px 0 20px;
 
   outline: none;
 

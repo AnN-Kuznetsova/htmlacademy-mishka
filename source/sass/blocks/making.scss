@@ -2,7 +2,7 @@
   @include container($mobile-width, $mobile-padding, 0, 58px);
 
   position: relative;
-  top: -150px;
+  top: -151px;
   overflow: hidden;
 
   margin-bottom: -150px;
@@ -50,12 +50,10 @@
   }
 
   @include desktop-width() {
-    @include container(auto, 78px, 94px, 45px);
+    @include container(auto, 78px, 94px, 55px);
     padding-right: 57px;
 
     flex-grow: 1;
-
-    border-left: none;
   }
 }
 
