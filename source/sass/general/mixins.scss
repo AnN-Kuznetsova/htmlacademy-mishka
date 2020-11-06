@@ -58,8 +58,8 @@
   display: block;
   position: relative;
 
-  margin: 0;
   @include container($mobile-width, $mobile-padding, 71px, 75px);
+  margin: 0;
 
   @include font-options($font-bold, 27px, 30px, $text-title-color);
   font-weight: normal;
@@ -115,7 +115,7 @@
 }
 
 //  тень при взаимодействии
-@mixin item-background($element: '') {
+@mixin item-background($element: "") {
   &:hover #{$element},
   &:focus #{$element} {
     box-shadow: 0 6px 10px 0 rgba($shadow-base-color, 0.1);

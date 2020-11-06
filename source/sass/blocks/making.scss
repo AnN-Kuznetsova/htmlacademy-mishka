@@ -28,7 +28,7 @@
   position: relative;
   top: 246px;
 
-  @include item-background('+ .making__wrapper');
+  @include item-background("+ .making__wrapper");
 
   @include tablet-width() {
     top: auto;
@@ -41,9 +41,9 @@
 
 .making__wrapper {
   @include container(260px, 33px, 23px, 32px);
+  @include item-background();
 
   border: 1px solid $border-color-gray;
-  @include item-background();
 
   @include tablet-width() {
     @include container(668px, 39px, 37px, 45px);

@@ -23,7 +23,7 @@
   &:focus {
     color: $link-text-color-hover;
 
-    &:after {
+    &::after {
       border-bottom: 2px solid $link-border-color-hover;
     }
   }
@@ -35,7 +35,7 @@
   &:active {
     color: rgba($link-text-color-hover, 0.3);
 
-    &:after {
+    &::after {
       border-bottom: 2px solid rgba($link-border-color-hover, 0.1);
     }
   }

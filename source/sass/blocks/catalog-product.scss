@@ -1,7 +1,7 @@
 .catalog-product {
   width: 260px;
 
-  @include item-background('.catalog-product__wrapper');
+  @include item-background(".catalog-product__wrapper");
 
   @include tablet-width() {
     display: flex;
