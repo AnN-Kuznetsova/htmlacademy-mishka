@@ -132,9 +132,13 @@ function init(){
     zoom: 17
   });
 
-  var myPlacemark = new ymaps.Placemark(coordinats, {
-    balloonContent: 'Мишка'
-    }, {
+  var myPlacemark = new ymaps.Placemark(
+    coordinats,
+    {
+      balloonContent: 'MISHKA <br/> ул. Большая Конюшенная, 19/8',
+      hintContent: 'ул. Большая Конюшенная, 19/8'
+    },
+    {
       iconLayout: 'default#image',
       iconImageHref: '../img/icon-map-pin.svg',
       iconImageSize: [67, 100],
