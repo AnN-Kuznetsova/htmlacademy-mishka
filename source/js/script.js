@@ -121,65 +121,69 @@ if (orderForm) {
 
 
 /*  Карта  */
-ymaps.ready(init);
+var mapElement = document.querySelector('#map');
 
-function init(){
-  var coordinats = [59.938631, 30.323055];
+if (mapElement) {
+  ymaps.ready(init);
 
-  var myMap = new ymaps.Map('map', {
-    center: coordinats,
-    controls: [],
-    zoom: 17
-  });
+  function init(){
+    var coordinats = [59.938631, 30.323055];
 
-  var myPlacemark = new ymaps.Placemark(
-    coordinats,
-    {
-      balloonContent: 'MISHKA <br/> ул. Большая Конюшенная, 19/8',
-      hintContent: 'ул. Большая Конюшенная, 19/8'
-    },
-    {
-      iconLayout: 'default#image',
-      iconImageHref: '../img/icon-map-pin.svg',
-      iconImageSize: [67, 100],
-      iconImageOffset: [-33, -100]
-  });
-  myMap.geoObjects.add(myPlacemark);
+    var myMap = new ymaps.Map('map', {
+      center: coordinats,
+      controls: [],
+      zoom: 17
+    });
 
-  var zoomControl = new ymaps.control.ZoomControl();
-  myMap.controls.add(zoomControl, {
-    size: "small",
-    float: "none",
-    position: {
-      bottom: "70px",
-      right: "40px"
-    }
-  });
+    var myPlacemark = new ymaps.Placemark(
+      coordinats,
+      {
+        balloonContent: 'MISHKA <br/> ул. Большая Конюшенная, 19/8',
+        hintContent: 'ул. Большая Конюшенная, 19/8'
+      },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/icon-map-pin.svg',
+        iconImageSize: [67, 100],
+        iconImageOffset: [-33, -100]
+    });
+    myMap.geoObjects.add(myPlacemark);
 
-  var fullscreenControl = new ymaps.control.FullscreenControl();
-  myMap.controls.add(fullscreenControl, {
-    float: "none",
-    position: {
-      top: "50px",
-      left: "40px"
-    }
-  });
+    var zoomControl = new ymaps.control.ZoomControl();
+    myMap.controls.add(zoomControl, {
+      size: "small",
+      float: "none",
+      position: {
+        bottom: "70px",
+        right: "40px"
+      }
+    });
 
-  var typeSelector = new ymaps.control.TypeSelector();
-  myMap.controls.add(typeSelector, {
-    float: "none",
-    position: {
-      top: "50px",
-      left: "85px"
-    }
-  });
+    var fullscreenControl = new ymaps.control.FullscreenControl();
+    myMap.controls.add(fullscreenControl, {
+      float: "none",
+      position: {
+        top: "50px",
+        left: "40px"
+      }
+    });
 
-  var geolocationControl = new ymaps.control.GeolocationControl();
-  myMap.controls.add(geolocationControl, {
-    float: "none",
-    position: {
-      top: "50px",
-      left: "190px"
-    }
-  });
+    var typeSelector = new ymaps.control.TypeSelector();
+    myMap.controls.add(typeSelector, {
+      float: "none",
+      position: {
+        top: "50px",
+        left: "85px"
+      }
+    });
+
+    var geolocationControl = new ymaps.control.GeolocationControl();
+    myMap.controls.add(geolocationControl, {
+      float: "none",
+      position: {
+        top: "50px",
+        left: "190px"
+      }
+    });
+  }
 }
