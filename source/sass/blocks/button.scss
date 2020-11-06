@@ -42,10 +42,6 @@
     color: $bg-color-green-light;
   }
 
-  /* &--green:focus {
-    @include focus();
-  } */
-
   &--green:active {
     background-color: $text-second-color;
     color: rgba($bg-color-green-light, 0.3);
