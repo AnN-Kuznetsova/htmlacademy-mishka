@@ -118,3 +118,27 @@ if (orderForm) {
     }
   });
 }
+
+
+/*  Карта  */
+function initMap() {
+  var center = new google.maps.LatLng(59.938862, 30.323058);
+
+  var mapOptions = {
+      zoom: 17,
+      center: center,
+      disableDefaultUI: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+
+  var markerImage = '../img/icon-map-pin.svg';
+
+  var marker = new google.maps.Marker({
+      position: center,
+      map: map,
+      animation: google.maps.Animation.DROP,
+      icon: markerImage
+  });
+};

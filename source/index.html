@@ -257,7 +257,7 @@
                   <img class="map__image" src="img/map-mobile@1x.jpg" width="320" height="457"
                     alt="Отображение адреса магазина «Мишка» на карте.">
                 </div>
-                <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600841767027!5m2!1sru!2sru" width="1440" height="457" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="-1" aria-label="Интерактивная карта."></iframe>
+                <div class="map__interactive" id="map"></div>
               </div>
             </section>
 
@@ -344,5 +344,6 @@
     </section>
 
     <script src="js/script.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACeK85DiR7fTjbIsntb6F4WDRhBgIetrw&callback=initMap"></script>
   </body>
 </html>
