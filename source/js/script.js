@@ -121,24 +121,61 @@ if (orderForm) {
 
 
 /*  Карта  */
-function initMap() {
-  var center = new google.maps.LatLng(59.938862, 30.323058);
+ymaps.ready(init);
 
-  var mapOptions = {
-      zoom: 17,
-      center: center,
-      disableDefaultUI: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
+function init(){
+  var coordinats = [59.938631, 30.323055];
 
-  var map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
-  var markerImage = '../img/icon-map-pin.svg';
-
-  var marker = new google.maps.Marker({
-      position: center,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      icon: markerImage
+  var myMap = new ymaps.Map('map', {
+    center: coordinats,
+    controls: [],
+    zoom: 17
   });
-};
+
+  var myPlacemark = new ymaps.Placemark(coordinats, {
+    balloonContent: 'Мишка'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icon-map-pin.svg',
+      iconImageSize: [67, 100],
+      iconImageOffset: [-33, -100]
+  });
+  myMap.geoObjects.add(myPlacemark);
+
+  var zoomControl = new ymaps.control.ZoomControl();
+  myMap.controls.add(zoomControl, {
+    size: "small",
+    float: "none",
+    position: {
+      bottom: "70px",
+      right: "40px"
+    }
+  });
+
+  var fullscreenControl = new ymaps.control.FullscreenControl();
+  myMap.controls.add(fullscreenControl, {
+    float: "none",
+    position: {
+      top: "50px",
+      left: "40px"
+    }
+  });
+
+  var typeSelector = new ymaps.control.TypeSelector();
+  myMap.controls.add(typeSelector, {
+    float: "none",
+    position: {
+      top: "50px",
+      left: "85px"
+    }
+  });
+
+  var geolocationControl = new ymaps.control.GeolocationControl();
+  myMap.controls.add(geolocationControl, {
+    float: "none",
+    position: {
+      top: "50px",
+      left: "190px"
+    }
+  });
+}
