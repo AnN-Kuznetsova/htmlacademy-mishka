@@ -317,19 +317,11 @@
   }
 
   //  чекбоксы
-  &--checkbox::after {
-    top: 50%;
-    left: 0;
-
-    width: $choice-size;
-    height: $choice-size;
-
+  &--checkbox::before {
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-size: 22px 16px;
     background-position: center center;
-
-    transform: translateY(-50%);
 
     @include tablet-width() {
       background-size: 33px 22px;
