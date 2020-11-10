@@ -47,7 +47,6 @@ if (addCartButtons.length && addCartModal && siteWrapper) {
   });
 
   addCartModal.addEventListener("submit", function(event) {
-    // event.preventDefault();
     onAddCartModalClose();
   });
 
