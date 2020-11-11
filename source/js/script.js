@@ -1,3 +1,8 @@
+if (typeof NodeList !== "undefined" && NodeList.prototype && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
+
 /*  Главное меню  */
 var navMain = document.querySelector('.main-nav');
 var navToggle = navMain.querySelector(".main-nav__toggle");
