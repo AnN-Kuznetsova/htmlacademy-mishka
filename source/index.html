@@ -258,8 +258,16 @@
               <div class="map__container">
                 <h3 class="visually-hidden">Мы на карте</h3>
                 <div class="map__image-wrapper">
-                  <img class="map__image" src="img/map-mobile@1x.jpg" width="320" height="457"
-                    alt="Отображение адреса магазина «Мишка» на карте.">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+                    <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457"
+                      alt="Отображение адреса магазина «Мишка» на карте.">
+                  </picture>
                 </div>
                 <div class="map__interactive" id="map"></div>
               </div>

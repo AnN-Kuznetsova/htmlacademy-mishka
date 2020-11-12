@@ -20,15 +20,15 @@ $map-height: 457px;
     content: "";
     top: 50%;
     left: 50%;
-    width: 67px;
-    height: 100px;
+    width: calc(67px + 24px);
+    height: calc(100px + 68px);
 
     background-image: url("../img/icon-map-pin.svg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center center;
+    background-size: 67px 100px;
+    background-position: right top;
 
-    transform: translate(calc(-67px / 2 + 11px), calc(-100px + 17px));
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -42,6 +42,14 @@ $map-height: 457px;
   margin: 0 auto;
 
   transform: translateY(-$translateY-var);
+
+  @include tablet-width() {
+    width: 768px;
+  }
+
+  @include desktop-width() {
+    width: 525px;
+  }
 }
 
 .map__interactive {
