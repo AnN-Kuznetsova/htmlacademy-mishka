@@ -57,7 +57,7 @@ if (addCartButtons.length && addCartModal && siteWrapper) {
   });
 
   window.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" || event.key === "Esc") {
       event.preventDefault();
       onAddCartModalClose();
     }
