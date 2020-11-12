@@ -113,7 +113,9 @@
               <ul class="product-data__list" role="none">
                 <li class="product-data__item  product-data__item--product-type">
                   <fieldset class="form-fieldset  form-fieldset--product-type">
-                    <legend class="form-fieldset__legend  form-fieldset__legend--choice">Тип</legend>
+                    <legend class="form-fieldset__legend  form-fieldset__legend--choice">
+                      <span class="form-fieldset__legend-text">Тип</span>
+                    </legend>
                     <ul class="form-fieldset__list  form-fieldset__list--product-type" role="none">
                       <li class="form-fieldset__item  form-fieldset__item--radio">
                         <input class="visually-hidden  form-fieldset__choice-input" id="interior-select" type="radio" name="type-select" value="interior" checked>
@@ -128,7 +130,9 @@
                 </li>
                 <li class="product-data__item  product-data__item--product-color">
                   <fieldset class="form-fieldset  form-fieldset--product-color">
-                    <legend class="form-fieldset__legend  form-fieldset__legend--choice">Цвет</legend>
+                    <legend class="form-fieldset__legend  form-fieldset__legend--choice">
+                      <span class="form-fieldset__legend-text">Цвет</span>
+                    </legend>
                     <ul class="form-fieldset__list  form-fieldset__list--product-color" role="none">
                       <li class="form-fieldset__item  form-fieldset__item--checkbox">
                         <input class="visually-hidden  form-fieldset__choice-input  form-fieldset__choice-input--gray" id="white-select" type="checkbox" name="white-select" checked>
@@ -166,7 +170,9 @@
               <ul class="client-data__list" role="none">
                 <li class="client-data__item  client-data__item--client-name">
                   <fieldset class="form-fieldset  form-fieldset--client-name">
-                    <legend class="form-fieldset__legend">ФИО</legend>
+                    <legend class="form-fieldset__legend">
+                      <span class="form-fieldset__legend-text">ФИО</span>
+                    </legend>
                     <div class="client-name">
                       <label class="form-fieldset__label  form-fieldset__label--client">Имя:
                         <input class="form-fieldset__input" id="client-name" type="text" name="client-name" value="" placeholder="Введите ваше имя*" required>
@@ -185,7 +191,9 @@
                     <legend class="visually-hidden">Связь</legend>
                     <ul class="form-fieldset__list  form-fieldset__list--communication" role="none">
                       <li class="form-fieldset__item  form-fieldset__item--communication">
-                        <label class="form-fieldset__legend  form-fieldset__legend--tel" for="client-tel">Тел</label>
+                        <label class="form-fieldset__legend  form-fieldset__legend--tel" for="client-tel">
+                          <span class="form-fieldset__legend-text">Тел</span>
+                        </label>
                         <div class="form-fieldset__input-wrapper">
                           <input class="form-fieldset__input  form-fieldset__input--tel" id="client-tel" type="tel" name="client-tel" value=""
                             placeholder="+7 XXX XXX XX XX*" pattern="[+]7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
@@ -195,7 +203,9 @@
                         </div>
                       </li>
                       <li class="form-fieldset__item  form-fieldset__item--communication">
-                        <label class="form-fieldset__legend  form-fieldset__legend--email" for="client-email">e&#8209;mail</label>
+                        <label class="form-fieldset__legend  form-fieldset__legend--email" for="client-email">
+                          <span class="form-fieldset__legend-text">e&#8209;mail</span>
+                        </label>
                         <div class="form-fieldset__input-wrapper">
                           <input class="form-fieldset__input  form-fieldset__input--email" id="client-email" type="email" name="client-email" value="" placeholder="Ваш Email*" required>
                           <svg class="form-fieldset__input-icon  form-fieldset__input-icon--email" width="32" height="21" aria-hidden="true" focusable="false">
@@ -212,7 +222,9 @@
             <!-- Дополнительная информация -->
             <div class="order-form__additionally">
               <div class="form-fieldset  form-fieldset--additionally">
-                <label class="form-fieldset__legend" for="additionally">Доп</label>
+                <label class="form-fieldset__legend  form-fieldset__legend--additionally" for="additionally">
+                  <span class="form-fieldset__legend-text">Доп</span>
+                </label>
                 <textarea class="form-fieldset__textarea" id="additionally" name="additionally" placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="6"></textarea>
               </div>
             </div>

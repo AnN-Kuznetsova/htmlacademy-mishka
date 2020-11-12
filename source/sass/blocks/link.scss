@@ -1,5 +1,8 @@
 .link {
   position: relative;
+  display: inline-block;
+
+  color: $text-base-color;
 
   &::after {
     position: absolute;
@@ -11,8 +14,7 @@
 
     color: $text-base-color;
 
-    border-bottom: 2px solid $link-border-color;
-    transform: translateY(3px);
+    border-bottom: 1px solid $link-border-color;
   }
 
   &:visited {
@@ -24,7 +26,7 @@
     color: $link-text-color-hover;
 
     &::after {
-      border-bottom: 2px solid $link-border-color-hover;
+      border-bottom: 1px solid $link-border-color-hover;
     }
   }
 
@@ -36,7 +38,7 @@
     color: rgba($link-text-color-hover, 0.3);
 
     &::after {
-      border-bottom: 2px solid rgba($link-border-color-hover, 0.1);
+      border-bottom: 1px solid rgba($link-border-color-hover, 0.1);
     }
   }
 }

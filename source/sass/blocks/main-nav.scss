@@ -309,6 +309,7 @@
   left: 0;
 
   fill: rgba($cart-icon-color-base, 0.2);
+  pointer-events: none;
 
   &--search {
     width: 18px;
@@ -336,9 +337,11 @@
 }
 
 .main-nav__link-text {
-  display: block;
+  display: inline-block;
   width: fit-content;
   margin-right: 20px;
+
+  pointer-events: none;
 
   &--active {
     box-shadow:

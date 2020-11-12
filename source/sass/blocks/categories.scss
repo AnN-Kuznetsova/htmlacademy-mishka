@@ -214,6 +214,8 @@
 
 .categories__link-text {
   max-width: 175px;
+
+  pointer-events: none;
 }
 
 .categories__link:active .categories__link-text {

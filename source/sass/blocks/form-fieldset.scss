@@ -12,8 +12,8 @@ $input-height: 52px;
 }
 
 .form-fieldset {
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   border: none;
   overflow: visible;
@@ -39,45 +39,36 @@ $input-height: 52px;
 }
 
 .form-fieldset__legend {
+  @include decorative-line-border(100%, 100%, 1px, $input-border-green-color, "top");
+
   position: relative;
   display: block;
-  width: min-content;
-  padding: 0 22px 29px 0;
-
-  @include font-options($font-bold, 17px, 17px, $text-form-legend-color);
-  text-transform: uppercase;
-
-  background-color: $bg-color-base;
+  width: 100%;
+  padding: 0 0 25px;
 
   &--choice {
-    padding-bottom: 25px;
+    padding-bottom: 21px;
   }
 
   &--tel,
   &--email {
-    padding-bottom: 6px;
+    padding-bottom: 0px;
+  }
+
+  &--additionally {
+    padding-bottom: 22px;
   }
 
   &::after {
-    position: absolute;
-    content: "";
     z-index: -1;
-    top: 9px;
-    left: 0;
-
-    width: 100vw;
-    height: 1px;
-
-    background-color: $input-border-green-color;
+    top: 12px;
   }
 
   @include tablet-width() {
     float: left;
     flex-shrink: 0;
-    min-width: 25%;
-    padding: 16px 50px 0 0;
-
-    background-color: transparent;
+    width: 25%;
+    padding: 14px 0 0;
 
     &::after {
       content: none;
@@ -85,8 +76,29 @@ $input-height: 52px;
   }
 
   @include desktop-width() {
-    min-width: 175px;
-    padding: 16px 30px 0 62px;
+    width: 175px;
+    padding: 14px 0 0 62px;
+  }
+}
+
+.form-fieldset__legend-text {
+  display: inline-block;
+  width: min-content;
+  padding-right: 22px;
+
+  @include font-options($font-bold, 17px, 17px, $text-form-legend-color);
+  text-transform: uppercase;
+
+  background-color: $bg-color-base;
+
+  @include tablet-width() {
+    padding-right: 50px;
+
+    background-color: transparent;
+  }
+
+  @include desktop-width() {
+    padding-right: 30px;
   }
 }
 
@@ -152,7 +164,7 @@ $input-height: 52px;
     flex-direction: column;
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 31px;
     }
   }
 
@@ -243,7 +255,6 @@ $input-height: 52px;
 
 .form-fieldset__input-wrapper {
   position: relative;
-
   width: 100%;
 }
 
@@ -315,14 +326,14 @@ $input-height: 52px;
     width: 25px;
     height: 24px;
 
-    transform: translateX(-33px) translateY(calc(-50% - 3px));
+    transform: translateX(-33px) translateY(-13px);
 
     @include tablet-width {
-      transform: translateX(-52px) translateY(calc(-50% - 3px));
+      transform: translateX(-52px) translateY(-14px);
     }
 
     @include desktop-width {
-      transform: translateX(-33px) translateY(calc(-50% - 3px));
+      transform: translateX(-33px) translateY(-15px);
     }
   }
 
@@ -330,14 +341,14 @@ $input-height: 52px;
     width: 32px;
     height: 21px;
 
-    transform: translateX(-37px) translateY(calc(-50% + 1px));
+    transform: translateX(-37px) translateY(-9px);
 
     @include tablet-width {
-      transform: translateX(-55px) translateY(calc(-50% - 1px));
+      transform: translateX(-55px) translateY(-10px);
     }
 
     @include desktop-width {
-      transform: translateX(-35px) translateY(calc(-50% - 1px));
+      transform: translateX(-35px) translateY(-11px);
     }
   }
 }
@@ -357,7 +368,7 @@ $input-height: 52px;
   width: 100%;
   min-height: 141px;
   margin: 0;
-  padding: 13px 15px;
+  padding: 14px 15px;
 
   @include font-options($font-regular, 17px, 18px, $text-base-color);
 
@@ -400,6 +411,7 @@ $input-height: 52px;
 
 .form-fieldset__choice-label {
   display: block;
+  min-height: $form-choice-size;
   margin: 0;
   padding-top: 9px;
 
@@ -410,6 +422,7 @@ $input-height: 52px;
     @include font-options($font-bold, 19px, 18px, $text-title-color);
     @include custom-choice($form-choice-size-tablet);
 
+    min-height: $form-choice-size-tablet;
     padding-top: 15px;
   }
 }

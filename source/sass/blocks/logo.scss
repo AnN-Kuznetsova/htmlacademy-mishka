@@ -27,6 +27,8 @@
   width: 86px;
   height: 35px;
 
+  pointer-events: none;
+
   @include tablet-width() {
     width: 112px;
     height: 46px;

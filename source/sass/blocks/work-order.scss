@@ -1,5 +1,5 @@
 .work-order__container {
-  @include container($mobile-width, $mobile-padding, 22px, 23px);
+  @include container($mobile-width, $mobile-padding, 22px, 20px);
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 62px, 7px);
